@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Box</title>
+    <link rel="stylesheet" href="border-box.css">
+</head>
+
+<body>
+    <h1><b>CSS Box Sizing</b></h1>
+    <p>The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+    </p>
+
+    <h2 style="color: red;"><b>Without the CSS box-sizing Property</b></h2>
+    <p>By default, the width and height of an element is calculated like this:</p> <br>
+
+    <p class="para1">width + padding + border = actual width of an element <br>
+        height + padding + border = actual height of an element</p>
+
+
+    <div class="container">
+        <div class="box1">Box-1</div>
+        <div class="box2">Box-2</div>
+    </div>
+
+    <p><b style="color: goldenrod;"> Note : The two box elements end up with different sizes in the result (because
+            Box-2 has a padding specified):</b></p> <br>
+
+    <h2 style="color: green;">The box-sizing property solves this problem.<b></b></h2>
+
+    <h2 style="color: red;"><b>With the CSS box-sizing Property</b></h2>
+    <p>The box-sizing property allows us to include the padding and border in an element's total width and height.</p>
+    <p>If we set <i style="color: brown; font-family: 'Times New Roman', Times, serif;"><b>box-sizing:
+                border-box;</b></i> on an element, padding and border are included in the width and height:</p>
+
+    <div class="container1">
+        <div class="box3">Box-3</div>
+        <div class="box4">Box-4</div>
+    </div> <br>
+
+    <div class="btn-last">
+        <a class="next2" href="./box-model.html">Previous Page</a>
+        <a class="next2" href="./flex.html" target="_blank">Next Page</a>
+    </div>
+</body>
+
+</html>

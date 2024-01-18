@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional javascript</title>
+    <link rel="stylesheet" href="../Condtional in js/Ternary.css">
+</head>
+
+<body>
+    <h1><b>JavaScript Ternary Operator</b></h1>
+    <p>Ternary Operator in JavaScript is a special operator which has three operands. <br>
+        In JavaScript, there is only one such operator i.e. Conditional Operator ( ?: ).</p>
+
+    <h2>Ternary Operator Syntax</h2>
+    <div class="example">
+        syntax : <br>
+        condition ? expression_if_true : expression_if_false
+    </div>
+
+    <p>
+        The ternary operator is basically a combination of a question mark and a colon. <br>
+        To use this operator, we need to write a conditional expression, followed by a question mark (?) <br>
+
+        Then we need to provide two statements or expressions separated by a colon. <br>
+        The first expression ( expression_if_true ) evaluates when the condition results in a true value, <br>
+        and the second expression ( expression_if_false ) evaluates when the condition results in a false value.
+    </p>
+
+    <div class="example">
+        Example 1. Suppose we want to check if a person passed or failed an examination. <br>
+        This is how the if-else block would look like: <br>
+         
+        <br>
+        var marks = 50; <br>
+
+        if(marks >= 40) <br>
+        { <br>
+        console.log("Passed"); <br>
+        } <br>
+        else { <br>
+        console.log("Failed"); <br>
+        } <br>
+
+    </div>
+
+    <p>Using the Ternary Operator, we can write the above block in just one line.</p>
+
+    <div class="example">console.log(( marks >= 40 ) ? "Passed" : "Failed" ); <br>
+        <p>In both cases, the output is:</p>
+        Output : Passed
+    </div>
+
+    <h3><b>Why Use the Ternary Operator in JavaScript?</b></h3>
+    <p>It is used to make our code short and simpler.</p>
+
+    <br> <br>
+    <div class="btn-last">
+   <a class="next2" href="../Condtional in js/if-else.html">Previous Page</a>
+   <a class="next2" href="../Condtional in js/loops.html" target="_blank">Next Page</a> 
+   
+</div>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+    <link rel="stylesheet" href="conversion.css">
+</head>
+
+<body>
+    <h1><b>Type Conversion</b></h1>
+    <p>Type conversion in JavaScript is an algorithm that allows us to manipulate the function’s data types <br>
+        from one to another (such as string to a number, object to a boolean, and so on) <br>
+        which is required by the function or operator to work in the right way to give the expected results.</p>
+
+    <h3><b>Example :</b></h3> <br>
+
+    <div class="example">
+        // Number is converted into String
+        <div>console.log('5' + 3); // '53' </div>
+
+        <br>
+        // String is converted into Number for calculation
+        <div>
+            console.log('5' - 3); // 2 <br>
+            console.log('5' * 3); // 15 <br>
+        </div>
+        <br>
+        // expression is converted into boolean <br>
+        <div>console.log(null == 1); // false </div>
+
+    </div>
+
+
+    <h1><b>Implicit Type Conversion</b></h1>
+    <p>
+        Implicit Type Conversions are the conversions of one data type into another data type (ensuring that operations
+        are done among same data types) <br>
+        for the operators or functions to work correctly. <br>
+
+        JavaScript automatically converts one data type to another (to the right type). <br>
+        These conversions are also known as type coercion in Javascript. <br>
+
+    </p>
+
+    <div class="example">
+
+        // Implicit conversion to string <br>
+        '25' + 15; // '2515'<br>
+        <br>
+        // Implicit conversions to a number <br>
+        23 * '2'; // 46 <br>
+        23 - true; // 22 // true is converted into 1 <br>
+        true - null; // 1 <br>
+
+
+        // Implicit conversions in statements
+        const arr = []; <br>
+        if(arr) { console.log('Hello World') }; // Hello World <br>
+        // Here the empty arr is converted into a Boolean true <br>
+
+    </div>
+    <p>
+        One operator that does not trigger implicit type coercion is ===,
+        which is a strict equality operator, whereas the loose equality operator == does both comparison and conversion
+        if need </p>
+
+    <h1><b>Explicit Type Conversions</b></h1>
+    <p>
+        Explicit Type Conversions are the conversions that are manually performed by the developer <br>
+        in the source code in order to get the required changes and to undo the errors done by the implicit type
+        conversions. <br>
+        Such conversions are also referred as typecasting in JavaScript. <br>
+    </p>
+
+    <div class="example">
+        const pensInBag = prompt('How many pens you have in your bag?'); <br>
+        const pensInHand = 10; <br>
+        const totalPens = pensInHand + pensInBag; <br>
+        console.log(totalPens); <br>
+
+    </div>
+
+    <h2><b>Types of Data Conversions in JavaScript</b></h2>
+    <p>The different types of type conversion in JavaScript are: </p>
+    <ul>
+        <li>String conversions</li>
+        <li>Numeric conversions</li>
+        <li>Boolean conversions</li>
+        <li>Symbol conversions</li>
+    </ul>
+
+    <h2><b>String Conversions</b></h2>
+    <p>
+        The conversion of a data type into a string is something known as String Conversion. <br>
+        To explicitly convert a data type into a string, we just need to apply the String() function, <br>
+        and implicit string conversion can be triggered by the use of + binary operator when one operand is a string.
+        <br>
+
+        All primitive values are converted to strings naturally<br>
+    </p>
+    <div class="example">
+        // String Conversion Implicitly
+        "25" + 56; // '2556' <br>
+        "25" + null; // '25null' <br>
+        "Ale " + undefined; // 'Ale undefined' <br>
+        "25" + false; // '25false' <br>
+
+        // String Conversion Explicitly
+        String(23); // '23' <br>
+        String(true); // 'true' <br>
+        String(32 - false); // '32' <br>
+        String(32 - true); // '31' <br>
+    </div>
+
+    <h2><b>Numeric Conversions</b></h2>
+    <p>
+        Now, it’s time for Numeric conversions, likewise string conversion, <br>
+        we use the Number() method to convert strings, booleans, and other numeric expressions into a number Explicitly.
+        <br>
+
+        Implicit numeric conversion is tricky because it is triggered in many cases :
+    </p>
+
+    <ul>
+        <li>Comparision operators (>, <,=>, <=)< /li>
+        <li>arithmetic operators ( `+` / % ).</li>
+        <li>Bitwise operators ( | & ^ ~)</li>
+        <li>unary + operator</li>
+    </ul>
+
+    <div class="example">
+
+
+        Let’s now look at some of the examples of numeric conversions: <br>
+
+        // Explicit conversion into number
+        Number(" 12 "); // 12 <br>
+        Number("-12.34"); // -12.34 <br>
+        Number("\n"); // 0 <br>
+
+        //null and indefined into a number <br>
+        Number(null); // 0 <br>
+        Number(undefined); // NaN <br>
+
+        // Booleans into Number <br>
+        Number(true); // 1 <br>
+        Number(false); // 0 <br>
+
+
+    </div>
+
+    <br>
+    <br>
+    <div class="example">
+
+        Points to Remember: <br>
+
+        In an expression, when we apply == operator to null or undefined, numeric conversions does not happen. <br>
+        Also, null is equal to null or undefined, and cannot be equal to anything else.<br>
+        null == null; // true <br>
+        null == 0; // false <br>
+        // null cannot be converted into 0 with equality operator <br>
+        null == undefined; // true <br>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="example">
+
+        To get an integer value from a given value, we use the parseInt() method : <br>
+        console.log(parseInt(65.456)); // 65<br>
+
+        According to operator precedence, the + operator has left-to-right associativity, <br>
+        so if we have an expression 2 + 3 + '4' + 'number' the the operation is done in the following way : <br>
+        2 + 3 + '4' + 'number' <br>
+        ==> 5 + '4' + 'number' <br>
+        // number 5 is converted implicitly into string and then concatenated <br>
+        ==> '54' + 'number' <br>
+        ==> '54number' <br>
+
+    </div>
+    </div>
+
+
+    <h2><b>Boolean Conversions</b></h2>
+    <p>Conversion of an expression into a boolean is known as boolean conversion. <br>
+        This conversion can be either done explicitly by the Boolean() Function, or implicitly in logical contexts (like
+        in if/else ) or triggered by the use of the logical operators (||, &&, !).</p> <br>
+
+    <div class="example">
+        Boolean(2); // true <br>
+
+        // conversion to boolean implicitly in an statement <br>
+        if(' ') {console.log(`Empty string`)}; // Empty string <br>
+
+        // implicit conversions due to logical operators <br>
+        !! 2; // true <br>
+        '' || 23; // 23 <br>
+
+
+    </div>
+
+
+    <h1><b>JavaScript Type Conversions</b></h1>
+    <h2>There are two types of type conversion in JavaScript.</h2>
+    <ul>
+        <li><b>Implicit Conversion</b> - automatic type conversion</li>
+        <li><b>Explicit Conversion</b> - manual type conversion</li>
+    </ul>
+
+    <h2>Example 1: Implicit Conversion to String</h2>
+    <div class="example">
+        // numeric string used with + gives string type <br>
+        let result; <br>
+
+        result = '3' + 2; <br>
+        console.log(result) // "32" <br>
+
+        result = '3' + true; <br>
+        console.log(result); // "3true" <br>
+
+        result = '3' + undefined; <br>
+        console.log(result); // "3undefined" <br>
+
+        result = '3' + null; <br>
+        console.log(result); // "3null" <br>
+    </div>
+
+    <h2> example 2. Implicit Conversion to Number</h2>
+    <div class="example">
+        // numeric string used with - , / , * results number type <br>
+
+        let result; <br>
+        <br>
+        result = '4' - '2'; <br>
+        console.log(result); // 2 <br>
+        <br>
+        result = '4' - 2; <br>
+        console.log(result); // 2 <br>
+        <br>
+        result = '4' * 2; <br>
+        console.log(result); // 8 <br>
+        <br>
+        result = '4' / 2; <br>
+        console.log(result); // 2 <br>
+    </div>
+
+    <h2>Example 3: Non-numeric String Results to NaN</h2>
+    <div class="example">
+        // non-numeric string used with - , / , * results to NaN <br>
+        <br>
+        let result; <br>
+        <br>
+        <br>
+        result = 'hello' - 'world'; <br>
+        console.log(result); // NaN <br>
+        <br>
+        <br>
+        result = '4' - 'hello'; <br>
+        console.log(result); // NaN <br>
+    </div>
+
+    <h2>Example 4: Implicit Boolean Conversion to Number</h2>
+    <div class="example">
+        // if boolean is used, true is 1, false is 0 <br>
+        <br>
+        let result; <br>
+        <br>
+        result = '4' - true; <br>
+        console.log(result); // 3 <br>
+        <br>
+        result = 4 + true; <br>
+        console.log(result); // 5 <br>
+        <br>
+        result = 4 + false; <br>
+        console.log(result); // 4 <br>
+    </div>
+
+    <h2>Example 5: null Conversion to Number</h2>
+    <div class="example">
+        // null is 0 when used with number <br>
+        let result; <br>
+        <br>
+        result = 4 + null; <br>
+        console.log(result); // 4 <br>
+
+        result = 4 - null; <br>
+        console.log(result); // 4 <br>
+    </div>
+
+    <h2>Example 6: undefined used with number, boolean or null</h2>
+    <div class="example"> 
+        // Arithmetic operation of undefined with number, boolean or null gives NaN <br>
+
+        let result; <br>
+        <br>
+        result = 4 + undefined; <br>
+        console.log(result); // NaN <br>
+        <br>
+        result = 4 - undefined; <br>
+        console.log(result); // NaN <br>
+        <br>
+        result = true + undefined; <br>
+        console.log(result); // NaN <br>
+        <br>
+        result = null + undefined; <br>
+        console.log(result); // NaN <br>
+    </div>
+
+
+
+
+
+
+
+
+
+    <br> <br>
+    <div class="btn-last">
+        <a class="next2" href="../Variables-And-Data-Type/index.html">Previous Page</a>
+        <a class="next2" href="../Operator/index.html" target="_blank">Next Page</a> 
+    </div>
+
+
+</body>
+
+</html>

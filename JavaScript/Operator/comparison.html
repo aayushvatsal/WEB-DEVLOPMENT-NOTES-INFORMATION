@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+    <link rel="stylesheet" href="comparison.css">
+</head>
+
+<body>
+    <h1><b>Comparison Operators in JavaScript </b></h1>
+    <p>We can only get a driving licence if your age is greater than or equal to 18 years. <br>
+        This can be expressed in programming using this (>=) comparison operator. </p>
+    <div class="example">
+        let age = 19; <br>
+        if(age >= 18){ <br>
+        console.log("You can get the driving licence"); <br>
+        }else { <br>
+        console.log("Sorry, you are too young to get a driving licence") <br>
+        } <br>
+    </div>
+
+    <h2><b>Example 1.</b></h2>
+    <div class="example">
+        let val_1 = 40 > 54; <br>
+        console.log(val_1) // returns false <br>
+        <h3>In val_1, a greater than (>) operator is used. <br>
+            It returns true if the first operand is greater than the second operand and false otherwise. <br>
+            Hence for (40 > 54), we get false because 40 is not greater than 54.</h3>
+    </div>
+
+    <h2><b>Example 2.</b></h2>
+    <div class="example">
+        let val_2 = 40 < 54; <br>
+            console.log(val_2); // returns true <br>
+            <h3>In val_2, less than (<) operator is used. <br>
+                    It returns true if the first operand is less than the second operand and false otherwise. <br>
+                    Hence for (40 < 54), we get true because 40 is less than 54.</h3>
+
+    </div>
+
+    <h2><b>Example 3.</b></h2>
+    <div class="example">
+        let val_3 = 15 >= 20; <br>
+        console.log(val_3); // returns false <br>
+
+        <h3>In val_3, a greater than or equal to (>=) operator is used. <br>
+            It returns true if the first operand is greater than or equal to the second operand and false otherwise.
+            <br>
+            Hence, for (15 >= 20), we get false because 15 is not greater than or equal to 20.
+        </h3>
+
+    </div>
+
+    <h2><b>Example 4.</b></h2>
+    <div class="example">
+        let val_4 = 15 <= 20; <br>
+            console.log(val_4); // returns true <br>
+            <h3>In val_4, less than or equal to the (<=) operator is used. <br>
+                    It returns true if the first operand is less than or equal to the second and false otherwise. <br>
+                    Hence, we get true for (15 <= 20) because 15 is less than 20. Even if we replace 15 with 20, <br>
+                        we get true as an equal sign is also present in this(<=) operator.</h3>
+    </div>
+
+    <h2><b>Example 5.</b></h2>
+    <div class="example">
+        let val_5 = 7 == '7'; // returns true <br>
+        console.log(val_5); <br>
+
+        <h3>In val_5, an equal to (==) operator is used. <br>
+            It converts both the operands to the common or same data type and returns true if both the operands are
+            equal in value. <br>
+            Hence, for (7 == '7') we get true.</h3>
+
+    </div>
+
+    <h2><b>Example 6.</b></h2>
+    <div class="example">
+        let val_6 = 7 === '7'; // returns false <br>
+        console.log(val_6); <br>
+        <h3>In val_6, a strict equal to (===) operator is used. <br>
+            It does not convert the operands to the common data type before comparing them and returns true <br>
+            if both the operands are equal in value as well as the same in data type. <br>
+            Hence, for (7 === '7'), we get false as both the operands are equal in value but different in data types as
+            the first operand 7 is of number data type and the second operand '7' is of string data type.</h3>
+    </div>
+
+    <h2><b>Example 7.</b></h2>
+    <div class="example">
+        let val_7 = 7 != '7'; // returns false <br>
+        console.log(val_7); <br>
+
+        <h3>In val_7, not equal to (!=) operator is used.
+            It converts both the operands to the common data type and returns true if both the operands are not equal in
+            value.
+            Hence, for (7 != '7') we get false.</h3>
+
+    </div>
+
+    <h2><b>Example 8.</b></h2>
+    <div class="example">
+        let val_8 = 7 !== '7'; // returns true
+        console.log(val_8);
+
+        <h3>In val_8, a strict not equal to (!==) operator is used. <br>
+            It does not convert the operands to the common or same data type before comparing them <br>
+            and returns true if both the operands are not equal in value. <br>
+            Hence, for (7 !== '7'), we get true as both the operands are equal in value but <br>
+            different in data types as the first operand 7 is of number data type and the second operand '7' is of
+            string data type.</h3>
+
+    </div>
+
+
+    <!-- <div class="example"> -->
+        <h2>comparing Numbers</h2>
+        <p>While comparing the operands that are numbers, <br>
+            numeric comparison is done by JavaScript in which both the number operands will be compared to each other.
+            <br>
+            In the example given below, a is compared with b.
+        </p>
+
+        <h3>Example</h3>
+        let a = 5; <br>
+        let b = 10; <br>
+        console.log(a > b); // false <br>
+        console.log(a < b); // true </div>
+
+            <!-- <div class="example"> -->
+                <h2>Comparing Strings</h2>
+                <p>The comparison is completely different in the case of strings. <br>
+                    Strings characters have character codes that are compared one by one when the comparison is between
+                    two strings. <br>
+                    Let us understand this by an example-</p>
+
+                <h3>Example :</h3>
+                <pre>
+                let str_1 = 'Good'; <br>
+                let str_2 = 'Bad'; <br>
+                let str_compared = str_2 < str_1; <br>
+                
+                // 1st output  <br>
+                console.log(str_compared); // true <br>
+                
+                // 2nd output <br>
+                console.log(str_1.charCodeAt(0)); // output is 71 <br>
+                
+                // 3rd output <br>
+                console.log(str_2.charCodeAt(0)); // output is 66 <br>
+            </pre>
+
+            <p> <h3>Explanation</h3>
+
+                In the 1st output, we can see that the 'str_compared' variable returns true. <br>
+                But how? It is because of the comparison of character codes of both the string operands. <br>
+                We see the comparison of strings, but actually, character codes are compared behind the scenes. <br>
+                 We can get the character codes of the 1st character of both the strings using the charCodeAt(index) method, <br> 
+                 as we can see in the example above. As the character code of variable 'str_2' i.e. 66 is less than that of variable 'str_1' i.e. 71, <br>
+                 str_compared (str_2 < str_1) is returned true. <br>
+                 </p>
+                 </div>
+
+                 <!-- <div class="example"> -->
+                    <h2>Comparison Of object</h2>
+                    <p>In JavaScript, Objects are used to store values in the form of key: value pairs, <br>
+                        i.e. key(name of the variable) and value separated by using a colon. <br>
+                        Objects can have properties (key and value pairs) and methods (an object property having a function definition as a value).</p>
+
+                        <h3><b>Comparing an object with a non-object</b></h3>
+
+                        <h3>Example:</h3>
+                        <pre>
+                            let notebook = { <br>
+                                valueOf: function() {  <br>
+                                  return 60;  <br>
+                                } <br>
+                              }; <br>
+                              
+                              let comicbook = { <br>
+                                toString: function() { <br>
+                                  return '30'; <br>
+                                } <br>
+                              }; <br>
+                              
+                              // 1st output <br>
+                              console.log(notebook == 60); <br>
+                              
+                              // 2nd output <br>
+                              console.log(comicbook < 20); <br>
+
+                              <h2><b>Output :</b></h2>
+                              // 1st output  <br>
+                              true <br>
+                              
+                              // 2nd output <br>
+                              false <br>                             
+                        </pre>
+                 
+                       <h2>Explanation</h2> 
+
+In the 1st output above, we can clearly see that when the first object "notebook" is compared with 60, <br>
+ true is returned as the valueOf() method in the object "notebook" has returned the value 60 that is equal to the other non-object value which is also 60. <br>
+<br>
+In the 2nd output above, as the valueOf() method is not present in the object "comicbook", the toString() method has returned the value that is 30. <br>
+This returned value is then used for the comparison with another operand 20. Hence, false is returned after the comparison as 30 is not less than 20.<br>
+
+ <h3><b>Comparision of an object with another object </b></h3>
+ <div class="example">
+    let notebook = { <br>
+        valueOf: function() { <br>
+          return 60; <br>
+        } <br>
+      }; <br>
+      
+      
+      let comicbook = { <br>
+        toString: function() { <br>
+          return '30'; <br>
+        } <br>
+      }; <br>
+      
+      console.log(notebook == comicbook); <br>
+
+      <h2><b>Output :</b></h2>
+      <p>false</p>
+      
+ </div>
+
+ <p>
+    In the output above, an object 'notebook' is compared with another object 'comicbook'. <br>
+    It is a straight comparison between the two objects. The 'notebook' object has returned 60, <br>
+    which is not equal to the value that the 'comicbook' object has returned i.e. 30. <br>
+     Hence, false is returned in the console. <br>
+ </p>
+
+ <br> <br>
+ <div class="btn-last">
+<a class="next2" href="../Operator/logicaloperator.html">Previous Page</a>
+<a class="next2" href="../Condtional in js/if-else.html" target="_blank">Next Page</a> 
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

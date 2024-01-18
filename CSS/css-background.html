@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BACKGROUND</title>
+    <link rel="stylesheet" href="background-style.css">
+</head>
+
+<body>
+    <h1><b>CSS BACKGROUND</b></h1>
+    <p>The CSS background properties are used to add background effects for elements.</p>
+
+    <ul>
+        <li><b>background-color</b></li>
+        <li><b>background-image</b></li>
+        <li><b>background-repeat</b></li>
+        <li><b>background-attachment</b></li>
+        <li><b>background-position</b></li>
+        <li><b>background (shorthand property)</b></li>
+    </ul>
+
+    <h1><b>Background-color</b></h1>
+    <p>The background-color property specifies the background color of an element.</p>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> body {
+            background-color: teal;
+          }</pre>
+    </h3>
+
+    <h1><b>background-image</b></h1>
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> header {
+                background-image: url("paper.gif");
+              }</pre>
+    </h3>
+    <h2><b>Example : </b></h2>
+
+    <ul class="bg">
+        <li><b>background-image</b></li>
+        <p>The background-image property specifies an image to use as the background of an element.</p>
+    </ul>
+
+    <h2><b>CSS Background Image Repeat</b></h2>
+    <p>By default, the background-image property repeats an image both horizontally and vertically.</p>
+
+    <p>If the image above is repeated only horizontally (background-repeat: repeat-x;)</p>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> p {
+                        background-image: url("gradient_bg.png");
+                        background-repeat: repeat-x;
+                      }</pre>
+    </h3>
+
+    <h2><b>CSS background-repeat: no-repeat</b></h2>
+    <p>Showing the background image only once is also specified by the background-repeat property:</p>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> p {
+                            background-image: url("img_book.png");
+                            background-repeat: no-repeat;
+                          }</pre>
+    </h3>
+
+    <h2><b>CSS background-position:</b></h2>
+    <p>The background-position property is used to specify the position of the background image.</p>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> p {
+                            background-image: url("img_book.png");
+                            background-repeat: no-repeat;
+                            background-position: right top;
+                          } </pre>
+    </h3>
+
+    <ul class="bg-1">
+        <li>Background Repeat : Sets how a background image will be repeated</li>
+        <li>Background Position :Sets the starting position of a background image</li>
+    </ul>
+
+    <h2><b>CSS background-attachment</b></h2>
+    <p>The background-attachment property specifies whether the background image should scroll or be fixed</p>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> p {
+                            background-image: url("img_book.png");
+                            background-repeat: no-repeat;
+                            background-position: right top;
+                            background-attachment: fixed;
+                          }</pre>
+    </h3>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> p {
+                            background-image: url("img_book.png");
+                            background-repeat: no-repeat;
+                            background-position: right top;
+                            background-attachment: Scroll;
+                          }</pre>
+    </h3>
+
+    <h2><b>CSS background - (Shorthand property)</b></h2>
+    <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is
+        called a shorthand property.</p>
+
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> body {
+                            background-color: #ffffff;
+                            background-image: url("img_book.png");
+                            background-repeat: no-repeat;
+                            background-position: right top;
+                            background-attachment: fixed;
+                          }</pre>
+    </h3>
+
+    <h1>Instead of writing: <br>
+        we can use the shorthand property background:</h1>
+
+    <h3 class="syntax"><b>Syntax :</b>
+        <pre> body {
+            background: #ffffff url("img_tree.png") no-repeat right top;
+                          }</pre>
+    </h3>
+    <div class="btn-last">
+        <a class="next2" href="./csscolor.html">Previous Page</a>
+        <a class="next2" href="./box-model.html" target="_blank">Next Page</a>
+
+
+
+
+</body>
+
+</html>

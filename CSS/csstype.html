@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Type</title>
+    <link rel="stylesheet" href="csstype.css">
+</head>
+
+<body>
+    <h1><b>How TO Add CSS</b></h1>
+    <h2><b>Three Ways to Insert CSS</b></h2>
+    <p>There are three ways of inserting a style sheet:</p>
+    <ul>
+        <li>External CSS</li>
+        <li>Internal CSS</li>
+        <li>Inline CSS</li>
+    </ul>
+
+    <h1><b>External CSS </b></h1>
+    <p>External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file.
+    <h4 style="color: orange;">Its extension must be .css for example style.css.</h4>
+    </p>
+    <p> We need to link this style.css file to your html pages like this:</p>
+
+    <div class="syntax">
+        <h3> syntax : </h3> <br>
+        <pre>
+            < link rel="stylesheet" type="text/css" href="style.css" >  </pre>
+    </div>
+
+    <div class="syntax">
+        <h3> syntax : </h3> <br>
+        <pre>
+                    < !DOCTYPE html>
+                    < html>
+                    < head>
+                    < link rel="stylesheet" href="mystyle.css">
+                    < /head>
+                    < body>
+
+                    < h1>This is a heading< /h1>
+                    < p>This is a paragraph.< /p>
+
+                   < /body>
+                   < /html> 
+                </pre>
+    </div>
+
+    <h4 style="color: gold;">The link tag must be used inside head section of html.</h4>
+
+    <h1><b>Internal CSS </b></h1>
+    <p>Internal CSS is used to apply CSS on a single document or page. <br>
+        It can affect all the elements of the page.
+
+    <h3>It is written inside the style tag within head section of html.</h3>
+    </p>
+
+    <div class="syntax">
+        <h3> syntax : </h3> <br>
+
+        <img src="inrenal css.png" alt="internal_css" height="30%" width="30%">
+
+    </div>
+
+    <h1><b>Inline CSS </b></h1>
+    <p>Inline CSS is used to apply CSS on a single line or element.
+        <br> To use inline styles, add the style attribute to the relevant element. <br>
+        The style attribute can contain any CSS property.
+    </p>
+    <div class="syntax">
+        <h3> syntax : </h3> <br>
+        <pre>
+        < p style="color:blue">Hello CSS< /p> </pre>
+    </div>
+    <div class="syntax">
+        <h3> syntax : </h3> <br>
+        <pre>
+                < !DOCTYPE html >
+                < html >
+                < body >
+                
+                < h1 style="color:blue;text-align:center;">This is a heading< /h1 >
+                < p style="color:red;">This is a paragraph.< /p >
+                
+                < /body>
+                < /html>  </pre>
+    </div>
+    <br>
+    <br>
+    <div class="btn-last">
+        <a class="next2" href="./CSS_Selector.html">Previous Page</a>
+        <a class="next2" href="./csscolor.html" target="_blank">Next Page</a>
+        
+    </div>
+</body>
+
+</html>

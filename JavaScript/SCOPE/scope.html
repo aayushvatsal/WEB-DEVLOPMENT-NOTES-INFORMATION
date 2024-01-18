@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+    <link rel="stylesheet" href="../SCOPE/scope.css">
+</head>
+
+<body>
+
+    <h1><b>Differnce Between "Let" "Var" And "Const"</b></h1>
+    <h2><b>Scope:</b></h2>
+    <ul>
+        <li><b>var:</b></li>
+        <h3><b>Function-scoped</b></h3>
+        <p> Variables declared with var are hoisted to the top of their containing function, <br>
+            and they are accessible throughout the entire function, regardless of where they are declared.</p>
+    </ul>
+
+    <ul>
+        <li><b>let and const:</b></li>
+        <h3><b>Block-scoped</b></h3>
+        <p> Variables declared with let and const are confined to the block (enclosed by curly braces) in which they are
+            defined. <br>
+            They are not hoisted to the top of the block.</p>
+    </ul>
+
+    <div class="example">
+        <h3><b>var</b></h3>
+        function exampleVar() { <br>
+        if (true) { <br>
+        var x = 10; <br>
+        } <br>
+        console.log(x); // 10, because var is function-scoped <br>
+        } <br> <br>
+
+        <h3><b>let</b></h3> <br>
+        function exampleLet() { <br>
+        if (true) { <br>
+        let y = 20; <br>
+        console.log(y); // 20, because let is block-scoped <br>
+        } <br>
+        // console.log(y); // ReferenceError: y is not defined <br>
+        } <br> <br>
+
+        <h3><b>const </b></h3><br>
+        function exampleConst() { <br>
+        const z = 30; <br>
+        // z = 40; // Error: Assignment to constant variable <br>
+        console.log(z); // 30 <br>
+        } <br> <br>
+
+        exampleVar(); <br>
+        exampleLet(); <br>
+        exampleConst(); <br>
+
+    </div>
+
+    <p>In modern JavaScript development, it's recommended to use const by default and only use let when you need a
+        variable to be reassigned. <br>
+        This helps in writing more maintainable and predictable code.</p>
+
+
+    <h1><b>JavaScript Variable Scope</b></h1>
+    <p>Scope refers to the availability of variables and functions in certain parts of the code.</p>
+    <ol> A variable has two types of scope:
+        <li><b>
+                <h3>Global Scope</h3>
+            </b></li>
+        <li>
+            <h3><b>Local Scope</b></h3>
+        </li>
+    </ol>
+
+    <h1><b>Global Scope</b></h1>
+    <p>A variable declared at the top of a program or outside of a function is considered a global scope variable.</p>
+
+    <div class="example">
+        // program to print a text <br>
+        let a = "hello"; <br> <br>
+
+        function greet () { <br>
+        console.log(a); <br>
+        } <br> <br>
+
+        greet(); // hello <br>
+    </div>
+
+    <p>
+        In the above program, variable <b><i><b>a</b></i></b> is declared at the top of a program and is a global
+        variable. <br>
+        It means the variable <b><i><b>a</b></i></b> can be used anywhere in the program.
+    </p>
+
+    <h3><b>The value of a global variable can be changed inside a function. For example,</b></h3>
+
+    <div class="example">
+        // program to show the change in global variable <br>
+        let a = "hello"; <br> <br>
+
+        function greet() { <br>
+        a = 3; <br>
+        } <br> <br>
+
+        // before the function call <br>
+        console.log(a); <br> <br>
+
+        //after the function call <br>
+        greet(); <br>
+        console.log(a); // 3 <br>
+    </div>
+
+    <h2><b>In JavaScript, a variable can also be used without declaring it. <br>
+            If a variable is used without declaring it, that variable automatically becomes a global variable.</b></h2>
+
+    <div class="example">
+        function greet() { <br>
+        a = "hello" <br>
+        } <br> <br>
+
+        greet(); <br> <br>
+
+        console.log(a); // hello
+    </div>
+
+    <p>
+        In the above program, variable a is a global variable. <br> <br>
+
+        If the variable was declared using let a = "hello", the program would throw an error.
+    </p>
+
+    <h1><b>Lexical Scope</b></h1>
+    <p>Lexical scope, also known as static scope, is a concept in programming language design that determines <br>
+        how variable names are resolved in a program. In a lexically scoped language, the scope of a variable is
+        determined by its location in the source code, <br>
+        i.e., its position within the nested structure of blocks, functions, or other lexical structures.</p>
+
+    <h2><b>1.Variables are resolved based on their position in the source code:</b></h2>
+    <p>When a variable is referenced, the interpreter or compiler looks for the variable in the surrounding lexical
+        scope. If the variable is not found in the current scope, <br>
+        it continues to search in the enclosing scopes until the variable is found or the outermost scope is reached.
+    </p>
+
+    <h2><b>2.Scope is defined by the structure of the code:</b></h2>
+    <p>The scope of a variable is determined by where it is declared in the code. This means that you can predict the
+        scope of a variable by examining the code without executing it.</p>
+
+    <div class="example">
+        function outerFunction() { <br>
+        let outerVariable = "I am outer!"; <br> <br>
+
+        function innerFunction() { <br>
+        let innerVariable = "I am inner!"; <br>
+        console.log(outerVariable); // Access outerVariable from the outer scope <br>
+        } <br> <br>
+
+        innerFunction(); <br>
+        } <br> <br>
+
+        outerFunction(); <br>
+
+    </div>
+
+    <p>In this example, outerVariable is in the lexical scope of innerFunction because innerFunction is defined inside
+        outerFunction. <br>
+        Therefore, innerFunction has access to outerVariable.</p>
+
+    <h1><b>Local Scope</b></h1>
+    <p>A variable can also have a local scope, i.e it can only be accessed within a function.</p>
+
+    <h2><b>Example 1: Local Scope Variable</b></h2>
+    <p>// program showing local scope of a variable <br>
+        let a = "hello"; <br> <br>
+
+        function greet() { <br>
+        let b = "World" <br>
+        console.log(a + b); <br>
+        } <br> <br>
+
+        greet(); <br>
+        console.log(a + b); // error</p>
+
+    Output <br> <br>
+
+    helloWorld <br>
+    Uncaught ReferenceError: b is not defined <br>
+
+    <p>In the above program, variable a is a global variable and variable b is a local variable. <br>
+         The variable b can be accessed only inside the function greet. Hence, when we try to access variable b outside of the function, an error occurs.</p>
+
+         
+
+
+
+    <div class="btn-last">
+        <a class="next2" href="/JavaScript/String/string.html">Previous Page</a>
+        <a class="next2" href="/JavaScript/Arrays/arrays.html" target="_blank">Next Page</a>
+    </div>
+</body>
+
+</html>

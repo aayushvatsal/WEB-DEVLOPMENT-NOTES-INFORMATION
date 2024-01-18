@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-item</title>
+    <link rel="stylesheet" href="align-item.css">
+</head>
+
+<body>
+
+
+    <h1><b>What is Align-Item?</b></h1>
+    <p>The align-items property specifies the default alignment for items inside a flexbox</p>
+    <ul>
+        <li>In a flexbox container, the flexbox items are aligned on the cross axis, <br>
+            which is vertical by default (opposite of flex-direction).</li>
+    </ul>
+
+    <h2><b>The Cross-Axis Axis</b></h2>
+    <p>The cross axis is defined by flex-direction</p>
+
+    <ul>
+        <li>Align-Item : Flex-Start</li>
+        <li>Align-Item : Flex-end</li>
+        <li>Align-Item : Flex-Center</li>
+        <li>Align-Item : Flex-baseline</li>
+        <li>Align-Item : Flex-Stretch(By default)</li>
+    </ul>
+
+    <!-- <h2>Align-Item : Flex-Start</h2>
+    <p>The flex-start value aligns the flex items at the top of the container:</p>
+    <div class="container">
+        <div class="flex-start">
+            <div class="box">Box-1</div>
+            <div class="box">Box-2</div>
+            <div class="box">Box-3</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-end</h2>
+    <p>The flex-end value aligns the flex items at the bottom of the container:</p>
+    <div class="container">
+        <div class="flex-end">
+            <div class="box-a">Box-1</div>
+            <div class="box-a">Box-2</div>
+            <div class="box-a">Box-3</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-center</h2>
+    <p>The center value aligns the flex items in the middle of the container:</p>
+    <div class="container">
+        <div class="flex-center">
+            <div class="box-b">Box-1</div>
+            <div class="box-b">Box-2</div>
+            <div class="box-b">Box-3</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-Baseline</h2>
+    <p>The baseline value aligns the flex items such as their baselines aligns:</p>
+    <div class="container">
+        <div class="flex-baseline">
+            <div class="box-c">Box-1</div>
+            <div class="box-c">Box-2</div>
+            <div class="box-c">Box-3</div>
+        </div>
+    </div>
+
+    <h1 style="color: red; background-color: powderblue;"><b>Flex-Direction: Column</b></h1>
+
+    <h2>Align-Item : Flex-Start</h2>
+    <p>The flex-start value aligns the flex items at the top of the container:</p>
+    <div class="container">
+        <div class="flex-start">
+            <div class="box-1">Box-Start</div>
+            <div class="box-1">Box-Start</div>
+            <div class="box-1">Box-Start</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-end</h2>
+    <p>The flex-end value aligns the flex items at the bottom of the container:</p>
+    <div class="container">
+        <div class="flex-end">
+            <div class="box-2">Box-end</div>
+            <div class="box-2">Box-end</div>
+            <div class="box-2">Box-end</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-center</h2>
+    <p>The center value aligns the flex items in the middle of the container:</p>
+    <div class="container">
+        <div class="flex-center">
+            <div class="box-3">Box-Center</div>
+            <div class="box-3">Box-Center</div>
+            <div class="box-3">Box-Center</div>
+        </div>
+    </div>
+
+    <h2>Align-Item : Flex-Baseline</h2>
+    <p>The baseline value aligns the flex items such as their baselines aligns:</p>
+    <div class="container">
+        <div class="flex-baseline">
+            <div class="box-4">Box-Baseline</div>
+            <div class="box-4">Box-Baseline</div>
+            <div class="box-4">Box-Baseline</div>
+        </div>
+    </div>
+
+    <h1><b>Flex -: Wrap</b></h1>
+    <p>The flex-wrap property specifies whether the flex items should wrap or not. <br>
+
+        The examples below have flex items, to better demonstrate the flex-wrap property.</p>
+    <section class="flex-wrap">
+        <div class="wrap">
+            <div class="box-i">flex-wrap-1</div>
+            <div class="box-i">flex-wrap-2</div>
+            <div class="box-i">flex-wrap-3</div>
+            <div class="box-i">flex-wrap-4</div>
+            <div class="box-i">flex-wrap-5</div>
+            <div class="box-i">flex-wrap-6</div>
+            <div class="box-i">flex-wrap-7</div>
+            <div class="box-i">flex-wrap-8</div>
+
+
+        </div>
+    </section>
+
+    <h1><b>Flex -: nowrap</b></h1>
+    <p>The nowrap value specifies that the flex items will not wrap (this is default): </p>
+    <section class="flex-nowrap">
+        <div class="nowrap">
+            <div class="box-ii">flex-wrap-1</div>
+            <div class="box-ii">flex-wrap-2</div>
+            <div class="box-ii">flex-wrap-3</div>
+            <div class="box-ii">flex-wrap-4</div>
+            <div class="box-ii">flex-wrap-5</div>
+            <div class="box-ii">flex-wrap-6</div>
+            <div class="box-ii">flex-wrap-7</div>
+            <div class="box-ii">flex-wrap-8</div>
+
+        </div>
+    </section>
+
+    <h1><b>Flex -: wrap-reverse</b></h1>
+    <p>The wrap-reverse value specifies that the flexible items will wrap if necessary, in reverse order: </p>
+    <section class="flex-wrapreverse">
+        <div class="wrapreverse">
+            <div class="box-iii">flex-wrap-1</div>
+            <div class="box-iii">flex-wrap-2</div>
+            <div class="box-iii">flex-wrap-3</div>
+            <div class="box-iii">flex-wrap-4</div>
+            <div class="box-iii">flex-wrap-5</div>
+            <div class="box-iii">flex-wrap-6</div>
+            <div class="box-iii">flex-wrap-7</div>
+            <div class="box-iii">flex-wrap-8</div>
+    </div>
+    </section>
+
+    <h1><b>Flex Flow Property </b></h1>
+    <p>The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.</p>
+    <section class="flex-flow">
+        <div class="box-iv">flex-Flow-Property-1</div>
+        <div class="box-iv">flex-Flow-Property-2</div>
+        <div class="box-iv">flex-Flow-Property-3</div>
+        <div class="box-iv">flex-Flow-Property-4</div>
+    </section>
+
+    <h1><b>Flex-Wrap-Reverse(Column)</b></h1>
+    <section class="flex-wrapreverse-Column">
+        <div class="wrapreverse-Column">
+            <div class="box-v">flex-wrap-column-1</div>
+            <div class="box-v">flex-wrap-column-2</div>
+            <div class="box-v">flex-wrap-column-3</div>
+            <div class="box-v">flex-wrap-column-4</div>
+            <div class="box-v">flex-wrap-column-5</div>
+            <div class="box-v">flex-wrap-column-6</div>
+            <div class="box-v">flex-wrap-column-7</div>
+            <div class="box-v">flex-wrap-column-8</div>
+    </div>
+    </section>
+
+
+    <h1><b>Flex-Wrap-Reverse(Column-Reverse)</b></h1>
+    <section class="flex-wrapreverse-Column-Reverse">
+        <div class="wrapreverse-Column-Reverse">
+            <div class="box-vi">flex-wrap-column-1</div>
+            <div class="box-vi">flex-wrap-column-2</div>
+            <div class="box-vi">flex-wrap-column-3</div>
+            <div class="box-vi">flex-wrap-column-4</div>
+            <div class="box-vi">flex-wrap-column-5</div>
+            <div class="box-vi">flex-wrap-column-6</div>
+            <div class="box-vi">flex-wrap-column-7</div>
+            <div class="box-vi">flex-wrap-column-8</div>
+    </div>
+    </section>
+
+    <h1><b>Flex-Wrap-Reverse(Row)</b></h1>
+    <section class="flex-wrapreverse-row">
+        <div class="wrapreverse-row">
+            <div class="box-row">column-1</div>
+            <div class="box-row">column-2</div>
+            <div class="box-row">column-3</div>
+            <div class="box-row">column-4</div>
+            <div class="box-row">column-5</div>
+            <div class="box-row">column-6</div>
+            <div class="box-row">column-7</div>
+            <div class="box-row">column-8</div>
+    </div>
+    </section>
+
+    <h1><b>Flex-Wrap-Reverse(Row-Reverse)</b></h1>
+    <section class="flex-wrapreverse-row-Reverse">
+        <div class="wrapreverse-row-Reverse">
+            <div class="box-vii">flex-wrap-column-1</div>
+            <div class="box-vii">flex-wrap-column-2</div>
+            <div class="box-vii">flex-wrap-column-3</div>
+            <div class="box-vii">flex-wrap-column-4</div>
+            <div class="box-vii">flex-wrap-column-5</div>
+            <div class="box-vii">flex-wrap-column-6</div>
+            <div class="box-vii">flex-wrap-column-7</div>
+            <div class="box-vii">flex-wrap-column-8</div>
+    </div>
+    </section> -->
+
+    <!-- <h1>Align-items Property</h1>
+    <h1><b>What is Align-Item?</b></h1>
+    <p>The align-items property specifies the default alignment for items inside a flexbox</p> -->
+    <ul>
+        <li>In a flexbox container, the flexbox items are aligned on the cross axis, <br>
+            which is vertical by default (opposite of flex-direction).</li>
+    </ul>
+
+    <h2><b>The Cross-Axis Axis</b></h2>
+    <p>The cross axis is defined by flex-direction</p>
+
+    <ul>
+        <li>Align-Item : Flex-Start</li>
+        <li>Align-Item : Flex-end</li>
+        <li>Align-Item : Flex-Center</li>
+        <li>Align-Item : Flex-baseline</li>
+        <li>Align-Item : Flex-Stretch(By default)</li>
+    </ul>
+
+    <h2>Align-items:flex stretch</h2>
+    <div class="flex-container">
+        <div class="flex-item fixed-height">fixed-height:125px</div>
+        <div class="flex-item min-height">min-height:125px</div>
+        <div class="flex-item max-height">max-height:125px</div>
+        <div class="flex-item">no height</div>
+    </div>
+
+    <h2>Align-items:flex start</h2>
+    <p>The flex-start value aligns the flex items at the top of the container:</p>
+    <div class="flex-container flex-start">
+        <div class="flex-item fixed-height">fixed-height:125px</div>
+        <div class="flex-item min-height">min-height:125px</div>
+        <div class="flex-item max-height">max-height:125px</div>
+        <div class="flex-item">no height</div>
+    </div>
+
+    <h2>Align-items:flex end</h2>
+    <p>The flex-end value aligns the flex items at the bottom of the container:</p>
+    <div class="flex-container flex-end">
+        <div class="flex-item fixed-height">fixed-height:125px</div>
+        <div class="flex-item min-height">min-height:125px</div>
+        <div class="flex-item max-height">max-height:125px</div>
+        <div class="flex-item">no height</div>
+    </div>
+
+    <h2>Align-items:flex center</h2>
+    <p>The center value aligns the flex items in the middle of the container:</p>
+    <div class="flex-container center">
+        <div class="flex-item fixed-height">fixed-height:125px</div>
+        <div class="flex-item min-height">min-height:125px</div>
+        <div class="flex-item max-height">max-height:125px</div>
+        <div class="flex-item">no height</div>
+    </div>
+
+    <h2>Align-items:flex baseline</h2>
+    <p>The baseline value aligns the flex items such as their baselines aligns:</p>
+    <div class="flex-container baseline">
+        <div class="flex-item-1 fixed-height">fixed-height:125px</div>
+        <div class="flex-item min-height">min-height:125px</div>
+        <div class="flex-item max-height">max-height:125px</div>
+        <div class="flex-item-4">no height</div>
+    </div>
+
+    <h1><b>Flex -: Wrap</b></h1>
+    <p>The flex-wrap property specifies whether the flex items should wrap or not. <br>
+
+        The examples below have flex items, to better demonstrate the flex-wrap property.</p>
+    <div class="wrap-container wrap">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: nowrap</b></h1>
+    <p>The nowrap value specifies that the flex items will not wrap (this is default):</p>
+    <div class="wrap-container nowrap">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: wrap-reverse</b></h1>
+    <p>The wrap-reverse value specifies that the flexible items will wrap if necessary, in reverse order: </p>
+    <div class="wrap-container wrap-reverse">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: wrap-reverse(column)</b></h1>
+    <div class="wrap-container wrap-reverse-column">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: wrap-reverse(column-reverse)</b></h1>
+    <div class="wrap-container wrap-reverse-column-reverse">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: wrap-reverse(row)</b></h1>
+    <div class="wrap-container wrap-reverse-row">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <h1><b>Flex -: wrap-reverse(row-reverse)</b></h1>
+    <div class="wrap-container wrap-reverse-row-reverse">
+        <div class="flex-item">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item">box-5</div>
+        <div class="flex-item">box-6</div>
+        <div class="flex-item">box-7</div>
+        <div class="flex-item">box-8</div>
+    </div>
+
+    <div class="btn-last">
+        <a class="next2" href="./flex.html">Previous Page</a>
+        <a class="next2" href="./flex-item.html" target="_blank">Next Page</a>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

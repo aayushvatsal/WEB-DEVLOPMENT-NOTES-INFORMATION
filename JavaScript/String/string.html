@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <link rel="stylesheet" href="../String/string.css">
+</head>
+
+<body>
+
+    <h1><b>JavaScript String</b></h1>
+    <p>The Javascript string is an object that represents a sequence
+        of character.</p>
+
+    <h2><b>Create JavaScript Strings</b></h2>
+    <p>In JavaScript, strings are created by surrounding them with quotes. There are three ways we can use quotes.</p>
+    <ul>
+        <li><b>Single quotes: </b>
+            <h3>'Hello'</h3>
+        </li>
+        <li><b>Double quotes:</b>
+            <h3>"Hello"</h3>
+        </li>
+        <li><b>Backticks:</b>
+            <h3>`Hello`</h3>
+        </li>
+    </ul>
+
+    <div class="example">
+        <h2><b>String Example</b></h2>
+        //strings example <br>
+        const name = 'Ram'; <br>
+        const name1 = "Shyam"; <br>
+        const result = `The names are ${name} and ${name1}`; <br>
+    </div>
+
+    <p>Backticks are generally used when we need to include variables or expressions into a string. <br>
+        This is done by wrapping variables or expressions with ${variable or expression} </p>
+
+    <h2><b>Access String Characters</b></h2>
+    <p>We can access the characters in a string in two ways.</p>
+    <ul>
+        <li>One way is to treat strings as an array. For example,</li>
+    </ul>
+    <div class="example">
+        const a = 'hello'; <br>
+        console.log(a[1]); // "e" <br>
+    </div>
+    <ul>
+        <li>Another way is to use the method charAt(). For example,</li>
+        <div class="example">
+            const a = 'hello'; <br>
+            console.log(a.charAt(1)); // "e" <br>
+        </div>
+    </ul>
+
+    <h1><b>JavaScript Strings are immutable</b></h1>
+
+    <p>In JavaScript, strings are immutable. That means the characters of a string cannot be changed. For example,</p>
+
+    <div class="example">
+        let a = 'hello'; <br>
+        a[0] = 'H'; <br>
+        console.log(a); // "hello" <br>
+    </div>
+
+    <p>However, we can assign the variable name to a new string. For example,</p>
+
+    <div class="example">
+        let a = 'hello'; <br>
+        a = 'Hello'; <br>
+        console.log(a); // "Hello" <br>
+    </div>
+
+    <h1><b>JavaScript is Case-Sensitive</b></h1>
+    <p>JavaScript is case-sensitive. That means in JavaScript, the lowercase and uppercase letters are treated as
+        different values. For example,</p>
+
+    <div class="example">
+        const a = 'a'; <br>
+        const b = 'A' <br>
+        console.log(a === b); // false <br>
+    </div>
+
+    <p>In JavaScript, a and A are treated as different values.</p>
+
+    <h2><b>JavaScript Multiline Strings</b></h2>
+    <p>To use a multiline string, we can either use the + operator or the \ operator. For example,</p>
+    <div class="example">
+        // using the + operator <br>
+        const message1 = 'This is a long message ' + <br>
+        'that spans across multiple lines' + <br>
+        'in the code.' <br>
+
+        // using the \ operator <br>
+        const message2 = 'This is a long message \ <br>
+        that spans across multiple lines \ <br>
+        in the code.' <br>
+    </div>
+
+    <h2><b>JavaScript String Length</b></h2>
+    <p>To find the length of a string, you can use built-in length property. For example,</p>
+
+    <div class="example">
+        const a = 'hello'; <br>
+        console.log(a.length); // 5 <br>
+    </div>
+
+    <h2><b>JavaScript String Objects</b></h2>
+    <p>we can also create strings using the new keyword. For example,</p>
+    <div class="example">
+        const a = 'hello'; <br>
+        const b = new String('hello'); <br>
+        <br>
+        console.log(a); // "hello" <br>
+        console.log(b); // "hello" <br>
+        <br>
+        console.log(typeof a); // "string" <br>
+        console.log(typeof b); // "object" <br>
+    </div>
+
+    <h2><b>JavaScript String() Function</b></h2>
+    <p>The String() function is used to convert various data types to strings. For example,</p>
+    <div class="example">
+        const a = 225; // number <br>
+        const b = true; // boolean <br>
+        <br>
+        //converting to string <br>
+        const result1 = String(a); <br>
+        const result2 = String(b); <br>
+        <br>
+        console.log(result1); // "225" <br>
+        console.log(result2); // "true" <br>
+    </div>
+
+    <h1><b>JavaScript String Methods</b></h1>
+    <p>The charAt() method returns the character at the specified index in a string.</p>
+    <h2><b>JavaScript String charAt()</b></h2>
+    <div class="example">
+        // string declaration <br>
+        const string = "Hello World!"; <br> <br>
+
+        // finding character at index 1 <br>
+        let index1 = string.charAt(1); <br> <br>
+
+        console.log("Character at index 1 is " + index1); <br> <br>
+
+        // Output: <br>
+        // Character at index 1 is e <br>
+    </div>
+
+    <h2><b>charAt() Parameters</b></h2>
+
+    <ul>
+        <li>
+            <h3><b>index</b></h3> - An integer between 0 and str.length - 1. If index cannot be converted to integer or
+            is not provided, the default value 0 is used.
+        </li>
+    </ul>
+
+    <h3>Example 1: Using charAt() Method With Integer Index Value </h3>
+    <div class="example">
+        // string declaration <br>
+        const string1 = "Hello World!"; <br> <br>
+
+        // finding character at index 8 <br>
+        let index8 = string1.charAt(8); <br> <br>
+
+        console.log("Character at index 8 is " + index8); <br>
+
+        output :
+        Character at index 8 is r
+
+    </div>
+
+    <h2><b>Example 2: Without passing parameter in charAt() </b></h2>
+    <div class="example">
+        let sentence = "Happy Birthday to you!"; <br>
+        <br>
+        // passing empty parameter in charAt() <br>
+        let index4 = sentence.charAt(); <br>
+        <br>
+        console.log("Character at index 0 is " + index4); <br>
+
+        output:
+        Character at index 0 is H
+    </div>
+
+    <h2><b>JavaScript String charCodeAt()</b></h2>
+    <p>The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given
+        index.</p>
+
+    <h2><b>JavaScript String codePointAt()</b></h2>
+    <p>The codePointAt() method returns an integer that denotes the Unicode point value of a character in the string.
+    </p>
+
+    <h2><b>JavaScript String concat()</b></h2>
+    <p>The concat() method concatenates given arguments to the given string.</p>
+    <div class="example">
+        let name3 = "Array" <br>
+        let course = "javascript" <br> <br>
+
+        console.log(name3.concat(" ","is a topic of"," ",course)) <br> <br>
+
+        output : Array is a topic of javascript
+    </div>
+
+    <h2><b>Javascript String endsWith()</b></h2>
+    <p>The endsWith() method returns true if a string ends with the specified string. If not, the method returns false.
+    </p>
+    <div class="example">
+        // string definition <br>
+        let sentence = "Java is to JavaScript what Car is to Carpet."; <br> <br>
+
+        // checking if the given string ends with "to Carpet." <br>
+        let check = sentence.endsWith("to Carpet."); <br> <br>
+
+        console.log(check); <br> <br>
+
+        // Output <br>
+        // true <br>
+    </div>
+
+
+    <br>
+    <div class="example">
+        endsWith() Syntax <br> <br>
+
+        The syntax of the endsWith() method is: <br> <br>
+
+        <h3><b>str.endsWith(searchString, length)</b></h3>
+    </div>
+
+    <h2><b>Javascript String includes()</b></h2>
+    <p>
+    <h3><b>includes()</b></h3> method checks if one string can be found inside another string.</p>
+    <div class="example">
+        const message = "JavaScript is fun"; <br> <br>
+
+        // check if message includes the string "Java" <br>
+        let result = message.includes("Java"); <br>
+        console.log(result); <br> <br>
+
+        // Output: true <br>
+    </div>
+
+    <h2><b>Another example</b></h2>
+    <div class="example">
+        let sentence = "Java is to JavaScript what Car is to Carpet."; <br> <br>
+
+        let check = sentence.includes("Java"); <br>
+        console.log(check); // true <br> <br>
+
+        // case sensitive <br>
+        let check1 = sentence.includes("java"); <br>
+        console.log(check1); // false <br> <br>
+
+        // second argument specifies position to start at <br>
+        let check2 = sentence.includes("Java", 20); <br>
+        console.log(check2); // false <br> <br>
+
+        let check3 = sentence.includes("whose"); <br>
+        console.log(check3); // false <br> <br>
+
+        let check4 = sentence.includes(""); <br>
+        console.log(check4); // true <br>
+    </div>
+
+    <h2><b>JavaScript String indexOf()</b></h2>
+    <p>
+    <h3><b>indexOf()</b></h3> method returns the index of the first occurence of the substring in a string.</p>
+
+    <div class="example">
+        const message = "JavaScript is not Java"; <br> <br>
+
+        // returns index of 'v' in first occurrence of 'va' <br>
+        const index = message.indexOf("va"); <br> <br>
+
+        console.log('index: ' + index); // index: 2 <br>
+    </div>
+
+    <h3><b>indexOf() Return Value</b></h3>
+    <ul>
+        <li>Returns the first index of the value in the string if it is present at least once.</li>
+        <li>Returns -1 if the value is not found in the string.</li>
+    </ul>
+
+    <div class="example">
+        <h3><b>Note:</b> <span>The indexOf() method is case sensitive.</span></h3>
+    </div>
+
+    <h2><b>Example 1: Using indexOf() method</b></h2>
+    <div class="example">
+        var str = "JavaScript is the world's most misunderstood programming language."; <br> <br>
+
+        // indexOf() returns the first occurance <br>
+        var index1 = str.indexOf("language"); <br>
+        console.log(index1); // 57 <br> <br>
+
+        var index2 = str.indexOf("p"); <br>
+        console.log(index2); // 8 <br> <br>
+
+        // second argument specifies the search's start index <br>
+        var index3 = str.indexOf("p", 9); <br>
+        console.log(index3); // 45 <br> <br>
+
+        // indexOf returns -1 if not found <br>
+        var index4 = str.indexOf("Python"); <br>
+        console.log(index4); // -1 <br>
+    </div>
+
+    <h2><b>JavaScript String lastIndexOf()</b></h2>
+    <span>
+        <h3><b>lastIndexOf()</b></h3> method returns the last index of occurence of a given substring in the string.
+    </span>
+
+    <div class="example">
+        // defining a string <br>
+        var str = "Programming"; <br> <br>
+
+        var substr = "g"; <br> <br>
+
+        // find last occurrence of "g" in str <br>
+        var result = str.lastIndexOf(substr); <br> <br>
+
+        console.log(result); <br> <br>
+
+        // Output: 10
+    </div>
+
+    <h2><b>Example: Using lastIndexOf() method</b></h2>
+    <div class="example">
+        // defining a string <br>
+        var str = "Programming"; <br> <br>
+
+        var substr = "m"; <br> <br>
+
+        // find last occurrence of "m" in str <br>
+        var result = str.lastIndexOf(substr); <br> <br>
+
+        console.log(result); //7
+    </div>
+
+    <h2><b>JavaScript String length</b></h2>
+    <p>
+    <h3><b>length</b></h3> property returns the number of characters in a string.
+    </p>
+    <div class="example">
+        // defining a string <br>
+        let sentence = "I love Javascript."; <br> <br>
+
+        // returns number of characters in the sentence string <br>
+        let len = sentence.length; <br> <br>
+
+        console.log(len); <br> <br>
+
+        // Output: <br>
+        // 18
+    </div>
+
+    <h2><b>Javascript String localeCompare()</b></h2>
+    <h3><b>localeCompare()</b></h3>
+    <p> method checks if a given string comes before, after, or is equivalent as another string in sort order.</p>
+    <div class="example">
+        // comparing 'c' with 'b' using localeCompare() <br>
+        let result1 = 'c'.localeCompare('b'); <br> <br>
+
+        // returns positive value if 'b' comes before 'c' <br>
+        console.log(result1);<br> <br>
+
+        // Output:
+        // 1
+    </div>
+
+    <h2><b>Javascript String match()</b></h2>
+    <p>The match() method returns the result of matching a string against a regular expression.</p>
+    <div class="example">
+        const message = "JavaScript is a fun programming language."; <br> <br>
+
+        // regular expression that checks if message contains 'programming' <br>
+        const exp = /programming/; <br> <br>
+
+        // check if exp is present in message <br>
+        let result = message.match(exp); <br>
+        console.log(result); <br> <br>
+
+
+        Output: [ <br>
+        'programming', <br>
+        index: 20, <br>
+        input: 'JavaScript is a fun programming language.', <br>
+        groups: undefined <br>
+        ]
+
+    </div>
+
+    <h2><b>Example 1</b></h2>
+    <div class="example">
+        const string = "I am learning JavaScript not Java."; <br>
+        const re = /Java/; <br> <br>
+
+        let result = string.match(re); <br>
+        console.log("Result of matching /Java/ :"); <br>
+        console.log(result); <br> <br>
+
+        const re1 = /Java/g; <br>
+        let result1 = string.match(re1); <br> <br>
+
+        console.log("Result of matching /Java/ with g flag:") <br>
+        console.log(result1); <br>
+    </div>
+
+    <h2><b>Javascript String matchAll()</b></h2>
+    <p>The matchAll() method returns an iterator of results after matching a string against a regular expression. </p>
+    <div class="example">
+        // string definition <br>
+        const sentence = "JavaScript1JavaScript2"; <br> <br>
+
+        // a pattern having 'JavaScript' followed by a digit <br>
+        const regex = /JavaScript\d/g; <br> <br>
+
+        // finding matches in the string for the given regular expression <br>
+        let results = sentence.matchAll(regex); <br> <br>
+
+        // looping through the iterator <br>
+        for (result of results) { <br>
+        console.log(result); <br>
+        } <br> <br>
+
+        // Output: <br>
+        // ["JavaScript1", index: 0, input: "JavaScript1JavaScript2", groups: undefined] <br>
+        // ["JavaScript2", index: 11, input: "JavaScript1JavaScript2", groups: undefined]
+    </div>
+
+    <h2><b>Javascript String padEnd()</b></h2>
+    <p>The padEnd() method pads the current string with another string to the end.</p>
+
+    <div class="example">
+
+        let string1 = "CODE"; <br> <br>
+
+        // padding "*" to the end of the given string <br>
+        // until the length of final padded string reaches 10 <br>
+        let paddedString = string1.padEnd(10, "*"); <br> <br>
+
+        console.log(paddedString); <br> <br>
+
+        // Output: CODE******
+    </div>
+
+    <h2><b> Using padEnd() Method </b></h2>
+    <div class="example">
+        // string definition <br>
+        let string1 = "CODE"; <br> <br>
+
+        // padding "$" to the end of the given string <br>
+        // until the length of final padded string reaches 10 <br>
+        let paddedString1= string1.padEnd(10, "$"); <br> <br>
+
+        console.log(paddedString1); <br>
+    </div>
+
+    <h2><b>Example 2: Using Multiple Character padString in padEnd()</b></h2>
+    <div class="example">
+        // string definition <br>
+        let string1 = "CODE"; <br> <br>
+
+        // padding 'JavaScript' to the end of the string <br>
+        // until the length of padded string reaches 17 <br> <br>
+
+        let paddedString2= string1.padEnd(17, 'JavaScript'); <br> <br>
+
+        console.log(paddedString2); <br>
+
+        <br>
+        Output : CODEJavaScriptJav
+    </div>
+
+    <h2><b>Javascript String padStart()</b></h2>
+    <p>The padStart() method pads the current string with another string to the start.</p>
+
+    <div class="example">
+        // string definition <br>
+        let string1 = "CODE"; <br> <br>
+
+        // padding "*" to the start of given string <br>
+        // until the length of final padded string reaches 10 <br>
+        let paddedString = string1.padStart(10, "*"); <br> <br>
+
+        console.log(paddedString); <br> <br>
+
+        // Output: ******CODE
+    </div>
+
+    <h2><b>JavaScript String repeat()</b></h2>
+    <p>The repeat() method creates a new string by repeating the given string a specified number of times and returns
+        it.</p>
+
+    <div class="example">
+        const holiday = "Happy holiday!"; <br> <br>
+
+        // repeating the given string 3 times <br>
+        const result = holiday.repeat(3); <br> <br>
+
+        console.log(result); <br> <br>
+
+        // Output:
+        // Happy holiday!Happy holiday!Happy holiday!
+    </div>
+
+    <h2><b>JavaScript String replace()</b></h2>
+    <p>The replace() method returns a new string with the specified string/regex replaced.</p>
+    <div class="example">
+        const message = "ball bat"; <br> <br>
+
+        // replace the first b with c <br>
+        let result = message.replace('b', 'c'); <br>
+        console.log(result); <br> <br>
+
+        // Output: call bat
+    </div>
+
+    <h2><b>Replace the first occurence</b></h2>
+    <div class="example">
+        const text = "Java is awesome. Java is fun." <br> <br>
+
+        // passing a string as the first parameter <br>
+        let pattern = "Java"; <br>
+        let new_text = text.replace(pattern, "JavaScript"); <br>
+        console.log(new_text); <br> <br>
+
+        // passing a regex as the first parameter <br>
+        pattern = /Java/; <br>
+        new_text = text.replace(pattern, "JavaScript"); <br>
+        console.log(new_text);<br>
+
+        <br>
+        <p>
+        <h3><b>Output</b></h3>
+        </p>
+        JavaScript is awesome. Java is fun. <br>
+        JavaScript is awesome. Java is fun. <br>
+    </div>
+
+    <h2><b>JavaScript String replaceAll()</b></h2>
+    <p>The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement.</p>
+
+    <div class="example">
+        const message = "ball bat"; <br> <br>
+
+        // replace all occurrence of b with c <br>
+        let result = message.replaceAll('b', 'c'); <br>
+        console.log(result); <br> <br>
+
+        // Output: call cat
+    </div>
+
+    <h2><b> Example 1.Using Replace All</b></h2>
+    <div class="example">
+        const text = "Java is awesome. Java is fun."; <br> <br>
+
+        // passing a string as the first parameter <br>
+        let pattern = "Java"; <br>
+        let new_text = text.replaceAll(pattern, "JavaScript"); <br>
+        console.log(new_text); <br> <br>
+
+        // passing a regex as the first parameter <br>
+        pattern = /Java/g; <br>
+        new_text = text.replaceAll(pattern, "JavaScript"); <br>
+        console.log(new_text); <br> <br>
+
+        Output :
+        JavaScript is awesome. JavaScript is fun <br>
+        JavaScript is awesome. JavaScript is fun. <br>
+    </div>
+
+    <h2><b>Javascript String search()</b></h2>
+    <p>The search() method searches for a match between a given string and a regular expression. </p>
+
+    <div class="example">
+        let sentence= "I love JavaScript."; <br> <br>
+
+        // pattern that searches the first occurence of an uppercase character <br>
+        let regExp = /[A-Z]/; <br> <br>
+
+        // searching for a match between regExp and given string <br>
+        let indexReg = sentence.search(regExp); <br> <br>
+
+        console.log(indexReg); <br> <br>
+
+        // Output: 0
+    </div>
+
+    <h2><b>Example 1. Using Search method</b></h2>
+    <div class="example">
+        // defining string <br>
+        let string1 = "JavaScript JavaScript1"; <br> <br>
+
+        // pattern having 'JavaScript' followed by a digit <br>
+        let regExp = /(JavaScript)\d/; <br> <br>
+
+        // searching for a match between regExp and given string <br>
+        let index = string1.search(regExp); <br> <br>
+
+        console.log(index);<br>
+    </div>
+
+    <h2><b>JavaScript String slice()</b></h2>
+    <ul>
+        <li>The slice() method extracts a part of a string.</li>
+        <li>The slice() method returns the extracted part in a new string.</li>
+        <li>The slice() method does not change the original string.</li>
+    </ul>
+
+    <div class="example">
+        <h3><b>Syntax</b></h3>
+        string.slice(start, end) <br>
+        [start : Required. <br>
+        The start position. <br>
+        (First character is 0).] <br>
+
+        <br>
+        [end : Optional. <br>
+        The end position (up to, but not including). <br>
+        Default is string length.] <br>
+    </div>
+
+    <h2><b>Example 1</b></h2>
+    <div class="example">
+        const str = "JavaScript is a very absurd programming language."; <br> <br>
+
+        // from index 28 to end <br>
+        console.log(str.slice(28)); // 'programming language.' <br> <br>
+
+        // from index 4 to 14 <br>
+        console.log(str.slice(4, 15)); // 'Script is a' <br>
+    </div>
+
+    <h2><b>JavaScript String split()</b></h2>
+    <p>The split() method divides a string into a list of substrings and returns them as an array.</p>
+
+    <div class="example">
+        const message = "JavaScript::is::fun"; <br> <br>
+
+        // divides the message string at :: <br>
+        let result = message.split("::"); <br>
+        console.log(result); <br> <br>
+
+        // Output: [ 'JavaScript', 'is', 'fun' ] <br>
+    </div>
+
+    <h2><b>Javascript String startsWith()</b></h2>
+    <p>The startsWith() method returns true if a string begins with specified character(s). If not, it returns false.
+    </p>
+
+    <div class="example">
+        const message = "JavaScript is fun"; <br> <br>
+
+        // check if message starts with Java <br>
+        let result = message.startsWith("Java"); <br> <br>
+
+        console.log(result); // true <br> <br>
+
+        // check if message starts with Script <br>
+        result = message.startsWith("Script"); <br> <br>
+
+        console.log(result); // false
+
+    </div>
+
+    <h2><b>Javascript String substring()</b></h2>
+    <p>The substring() method returns a specified part of the string between start and end indexes.</p>
+
+    <div class="example">
+        let string = "Programiz JavaScript Tutorials"; <br> <br>
+
+        // first character <br>
+        substr1 = string.substring(0, 1); <br>
+        console.log(substr1); // P <br> <br>
+
+        // if start > end, they are swapped <br>
+        substr2 = string.substring(1, 0); <br>
+        console.log(substr2); // P <br> <br>
+
+        // From 11th to last character <br>
+        substr3 = string.substring(10); <br>
+        console.log(substr3); // JavaScript Tutorials <br>
+
+        // the extreme values are 0 and str.length <br> <br>
+
+        // same as string.substring(0) <br>
+        substr4 = string.substring(-44, 90); <br>
+        console.log(substr4); // Programiz JavaScript Tutorials <br> <br>
+
+        // indexEnd is exclusive <br>
+        substr5 = string.substring(0, string.length - 1); <br>
+        console.log(substr5); // Programiz JavaScript Tutorial <br>
+    </div>
+
+    <h2><b>JavaScript string trim()</b></h2>
+    <p>The trim() method removes whitespace from both ends of a string.</p>
+
+    <div class="example">
+        let str = " foo "; <br>
+        console.log(str.trim()); // 'foo' <br> <br>
+
+        // trim() removes whitespace only from the edges <br>
+        let str1 = " A B C D "; <br>
+        console.log(str1.trim()); // 'A B C D' <br>
+    </div>
+
+    <h2><b>Javascript String toUpperCase()</b></h2>
+    <p>The toUpperCase() method returns the string converted to uppercase.</p>
+    <div class="example">
+        const message = "javascript is fun"; <br> <br>
+
+        // convert message to uppercase <br>
+        const upperMessage = message.toUpperCase(); <br>
+        console.log(upperMessage); <br> <br>
+
+        // Output: JAVASCRIPT IS FUN
+    </div>
+
+    <h2><b>Javascript String toLowerCase()</b></h2>
+    <p>The toLowerCase() method returns the string converted to lowercase.</p>
+
+    <div class="example">
+        const message = "JAVASCRIPT IS FUN"; <br> <br>
+
+        // convert message to lowercase <br>
+        const lowerMessage = message.toLowerCase(); <br>
+        console.log(lowerMessage); <br> <br>
+
+        // Output: javascript is fun
+    </div>
+
+
+
+    <div class="btn-last">
+        <a class="next2" href="/JavaScript/Function-js/HTML/function.html">Previous Page</a>
+        <a class="next2" href="/JavaScript/SCOPE/scope.html" target="_blank">Next Page</a>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-else</title>
+    <link rel="stylesheet" href="../Condtional in js/if-else.css">
+</head>
+
+<body>
+    <h1><b>How to Use Conditional Statements?</b></h1>
+    <p>
+        If else statements are also known as conditional statements. <br>
+        This is so because of their property of executing a certain process only if a certain condition is satisfied.
+        <br>
+
+        In order to use an if-else statement, we need to follow a set of steps: <br>
+    </p>
+
+    <ul><b>First of all, we need to define a condition.</b></ul>
+    <li>The conditional could be any statement that would return a true or false value.</li>
+    <li>For e.g. it can be the comparison of two operands using comparison operators or a simple boolean variable.</li>
+
+    <h3>Place the condition inside if() Statement</h3>
+    <ul>
+        <li>Once the condition is defined, place the condition inside if() statement. The execution of if() block will
+            depend on whether the condition is true or false.</li>
+    </ul>
+
+    <h3><b>Define an else Block</b></h3>
+    <ul>
+        <li>Then we will define an else block to execute a statement in case the condition returns false.</li>
+    </ul>
+
+    <div class="example">
+        if(condition){ <br>
+        //Executes if the condition is true <br>
+        }else{ <br>
+        //Executes if the condition is false <br>
+        }
+
+    </div>
+
+    <!-- <h1><b>Flow charset</b></h1> -->
+    <!-- <div class="flow-chart"><img src="../Condtional in js/Images/flowchart-representing-if-else-i.jpg" alt=""></div> -->
+
+    <h2><b> if Statement</b></h2>
+    <p>The if statement in javascript executes the statements inside it only if the condition that is mentioned is true.
+    </p>
+
+    <div class="example">
+        <h2><b>Note :</b></h2>
+        <h3> if statement can be executed independently, i.e. without any else statement.</h3>
+    </div> <br>
+
+    <div class="example">
+        <h2>Syntax</h2>
+        if(condition){ <br>
+        //code to be executed <br>
+        } <br>
+
+    </div>
+
+    <h2><b>The if...else Statement in JavaScript</b></h2>
+    <p>else statement in javascript is used to execute a block when all if conditions fail. <br>
+        In order to write an else block, it is mandatory to declare an if statement, although the vice versa is not
+        true.</p>
+
+    <div class="example">
+        <h2>Note:</h2>
+        <h3>In if else in Javascript, the else statement can not be executed independently, i.e. it is mandatory to
+            write an if statement before an else statement.</h3>
+    </div>
+    <br>
+    <div class="example">
+        if(condition){ <br>
+        //code to be executed <br>
+        }else{ <br>
+        //code to be executed <br>
+        } <br>
+
+    </div>
+
+    <h2><b>nested if else Statement in JavaScript</b></h2>
+    <p>For e.g., while logging into our social media account the website first checks if our username is in the
+        database, <br>
+        once the condition is satisfied, it takes our password and matches it with the one in their database. <br>
+        Although if the username is not found, the website won't bother to check the password. <br>
+        In such cases, the nested if-else statement can be used to validate multiple layers.</p> <br>
+
+    <div class="example">
+        <h3>Syntax:</h3>
+        if(condition1){ <br>
+        //nested if-else statement <br>
+        if(condition){ <br>
+        //code <br>
+        }else{ <br>
+        //code <br>
+        } <br>
+        } <br>
+
+    </div>
+
+    <h2><b>The if...else if... Statement in JavaScript</b></h2>
+    <p>the if else if condition is used. It is used where there are multiple conditions to be checked in order to
+        proceed.</p>
+
+    <div class="example">
+        <h2>Note :</h2>
+        <h3> if else if condition should not be confused with nested if-else, in if else if condition, <br>
+            there are multiple conditions, but only one can be executed, but in nested if-else condition, <br>
+            there are multiple conditions, and for the execution of nested condition it is mandatory that
+            the previous condition has returned true (also, in this case, multiple conditions can be true).</h3> <br>
+    </div>
+    <br>
+
+    <div class="example">
+        if(condition1){ <br>
+        //code to be executed <br>
+        }else if(condition2){ <br>
+        //code to be executed <br>
+        } <br>
+
+        </div>
+
+        In if else in Javascript, the if statement of if-else is declared by declaring the if statement followed by <br>
+        declaring another if statement after the else keyword. <br>
+
+        We can add any number of else if statements. <br>
+        <div class="example">
+        if(condition1){ <br>
+            //code to be executed <br>
+        }else if(condition2){ <br>
+            //code to be executed <br>
+        }else if(condition3){ <br>
+            //code to be executed <br>
+        }else if(condition4){ <br>
+            //code to be executed <br>
+        }else if(condition5){ <br>
+            //code to be executed <br>
+        } <br>
+    </div>
+
+        An else statement can also be added in the end of the if, and else if conditions as well. <br>
+        This else will only execute when all if conditions will fail.
+
+        <div class="example">
+            if(condition1){ <br>
+                //code to be executed   <br>
+            }else if(condition2){  <br>
+                //code to be executed  <br>
+            }else{  <br>
+                //code to be executed  <br>
+            }  <br>
+            
+        </div>
+
+        <h2><b>Switch Case Statement</b></h2>
+        <p>Switch case in javascript can be defined as an equivalent of an if-else statement. <br>
+            The switch statement takes an expression and evaluates it with respect to other cases, and then outputs the values associated with the case that matches the expression.</p> <br>
+
+            <div class="example">
+                switch (expression) { <br>
+                    case caseValue1: <br>
+                      //code a  <br>
+                      break; <br>
+                    case caseValue2: <br>
+                      //code b <br>
+                      break; <br>
+                    default: <br>
+                      //code c <br>
+                      break; <br>
+                  }<br>
+                  
+            </div>
+
+            <h2><b>Break Statement</b></h2>
+            <p>When the switch case evaluates the expression with the cases, it returns either true or false. <br>
+                Once the true state is achieved, the switch case keeps processing the code statements until either it encounters a break or it reaches the end of the switch case.</p> <br>
+
+                <div class="example"> 
+                    function groceryPrice(exp){ <br>
+                        switch (exp) { <br>
+                         case 'Cookies': <br>
+                           console.log('Cookies cost 100 rupees'); <br>
+                         case 'Milk': <br>
+                           console.log('Milk cost 60 rupees'); <br>
+                         case 'Fruits': <br>
+                           console.log('Fruits cost 300 rupees'); <br>
+                           break;      <br>
+                         case 'Corn Flakes': <br>
+                           console.log('Corn Flakes cost 150 rupees'); <br>
+                         default: <br>
+                           console.log(exp + ' is not available right now'); <br>
+                         } <br>
+                       }<br>
+                       <br>
+                       <br>
+                       
+                       groceryPrice('Cookies'); <br>
+                       //output: Cookies cost 100 rupees <br>
+                       //        Milk cost 60 rupees <br>
+                       //        Fruits cost 300 rupees <br>
+                             
+                </div>
+
+                <br> <br>
+                <div class="btn-last">
+               <a class="next2" href="../Operator/comparison.html">Previous Page</a>
+               <a class="next2" href="../Condtional in js/Ternary.html" target="_blank">Next Page</a>
+             
+           </div>
+
+
+        
+
+   
+
+
+
+
+</body>
+
+</html>

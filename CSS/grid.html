@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <h1>Introduction to CSS Grid</h1>
+    <p>CSS Grid Layout is a two-dimensional grid-based layout system.
+    Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+    <br>
+
+    <h2><b>Grid Elements</b></h2>
+    <p>A grid layout consists of a parent element, with one or more child elements.</p>
+    <p>A Grid Layout must have a parent element with the <em>display</em> property set to <br>
+        <em>grid</em> or <em>inline-grid</em>.</p>
+
+        <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div> 
+
+      <h2><b>Display Property</b></h2>
+      <p>An HTML element becomes a grid container when its display property is set to grid or inline-grid.</p>
+
+      <h3>display : grid</h3>
+
+      <div class="syntax"> <br>
+        <h3> syntax : </h3> <br>
+        .grid-container { <br>
+            display: grid; <br>
+          }  
+    </div>
+
+    <h3>display : inline-grid</h3>
+
+      <div class="syntax"> <br>
+        <h3> syntax : </h3> <br>
+        .grid-container { <br>
+            display: inline-grid; <br>
+          }  
+    </div>
+
+    <h2><b>Grid Columns:</b></h2>
+    <p>The vertical lines of grid items are called columns.</p>
+
+    <div class="grid-container-columns">
+        <div class="grid-item-columns">1</div>
+        <div class="grid-item-columns">2</div>
+        <div class="grid-item-columns">3</div>
+       
+      </div> 
+
+      <h3>Place a grid item at column line 1, and let it end on column line 3:</h3>
+
+      <div class="grid-container-col">
+        <div class="itemA">A</div>
+        <div class="itemB">B</div>
+        <div class="itemC">C</div>  
+        <div class="itemD">D</div>
+        <div class="itemE">E</div>
+        <div class="itemF">F</div>
+        <div class="itemG">G</div>
+        <div class="itemH">H</div>  
+      </div>
+
+
+      <h2><b>Grid Rows:</b></h2>
+    <p>The horizontal lines of grid items are called rows.</p>
+
+    <div class="grid-container-rows">
+        <div class="grid-item-rows">1</div>
+        <div class="grid-item-rows">2</div>
+        <div class="grid-item-rows">3</div>
+       
+      </div> 
+
+      <h3>Place a grid item at rows line 1, and let it end on rows line 3:</h3>
+
+      <div class="grid-container-row">
+        <div class="item1">A</div>
+        <div class="itemB">B</div>
+        <div class="itemC">C</div>  
+        <div class="itemD">D</div>
+        <div class="itemE">E</div>
+        <div class="itemF">F</div>
+        <div class="itemG">G</div>
+        <div class="itemH">H</div>  
+      </div>
+
+      <h1><b>Grid Gaps:(Gutter)</b></h1>
+      <p>The spaces between each column/row are called gaps.</p>
+
+      <h3>we can adjust the gap size by using one of the following properties:</h3>
+      <ul>
+        <li><b>column-gap</b></li>
+        <li><b>Row-gap</b></li>
+        <li>gap</li>
+      </ul>
+
+      <h2>The column-gap Property</h2>
+
+<p>Use the <em>column-gap</em> property to adjust the space between the columns:</p>
+
+<div class="grid-container-column-gap">
+    <div class="grid-item-column-gap">1</div>
+    <div class="grid-item-column-gap">2</div>
+    <div class="grid-item-column-gap">3</div>  
+    <div class="grid-item-column-gap">4</div>
+    <div class="grid-item-column-gap">5</div>
+    <div class="grid-item-column-gap">6</div>  
+    <div class="grid-item-column-gap">7</div>
+    <div class="grid-item-column-gap">8</div>
+    <div class="grid-item-column-gap">9</div>  
+  </div>
+
+  <h2>The Row-gap Property</h2>
+
+  <p>Use the <em>Row-gap</em> property to adjust the space between the rows:</p>
+  
+  <div class="grid-container-row-gap">
+      <div class="grid-item-row-gap">1</div>
+      <div class="grid-item-row-gap">2</div>
+      <div class="grid-item-row-gap">3</div>  
+      <div class="grid-item-row-gap">4</div>
+      <div class="grid-item-row-gap">5</div>
+      <div class="grid-item-row-gap">6</div>  
+      <div class="grid-item-row-gap">7</div>
+      <div class="grid-item-row-gap">8</div>
+      <div class="grid-item-row-gap">9</div>  
+    </div>
+
+    <h2><b>Gap</b></h2>
+    <p>The gap property is a shorthand property for the row-gap and the column-gap properties in one value</p>
+
+    <h3>Gap(ShorthandProperties)</h3>
+
+    <div class="syntax"> <br>
+      <h3> syntax : </h3> <br>
+      .grid-container { <br>
+        display: grid; <br>
+        gap: 50px; <br>
+        }  
+  </div>
+
+  <h2><b>Grid Lines</b></h2>
+  <ul>
+    <li>The lines between columns are called column lines.</li>
+    <li>The lines between rows are called row lines.</li>
+  </ul>
+
+  <img class="grid-line" src="Gridline.png" alt="grid">
+
+
+  <h1><b>Grid container</b></h1>
+  <p>To make an HTML element behave as a grid container, 
+   we have to set the display property to grid or inline-grid.</p>
+
+   <h2><b>The grid-template-columns Property</b></h2>
+   <p><ul>
+    <li>The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.</li>
+    <li>The value is a space-separated-list, where each value defines the width of the respective column.</li>
+   </ul></p>
+
+   <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div> 
+   <br>
+
+   <div class="syntax"> <br>
+    <h3> syntax : </h3> <br>
+    .grid-container { <br>
+      display: grid; <br>
+      grid-template-columns: 80px 200px auto 40px; <br>
+      }  
+</div>
+
+
+<h2><b>The grid-template-rows Property</b></h2>
+   <p><ul>
+    <li>The grid-template-rows property defines the height of each row.</li>
+    <li>The value is a space-separated-list, where each value defines the width of the respective column.</li>
+   </ul></p>
+
+   
+   <div class="grid-container-rows">
+    <div class="grid-item-rows">grid-template-rows-1</div>
+    <div class="grid-item-rows">grid-template-rows-2</div>
+    <div class="grid-item-rows">grid-template-rows-3</div>
+    
+    
+   
+  </div> 
+   <br>
+
+   <div class="syntax"> <br>
+    <h3> syntax : </h3> <br>
+    .grid-container { <br>
+      display: grid; <br>
+      grid-template-rows: 80px 200px; <br>
+      }  
+</div>
+
+<h1><b>Justify-content Property</b></h1>
+<ul>
+    <li>Justify-content:start</li>
+    <li>Justify-content:End</li>
+    <li>Justify-content:center</li>
+    <li>Justify-content:space-between</li>
+    <li>Justify-content:space-evenly</li>
+    <li>Justify-content:space-around</li>
+</ul>
+
+<h2><b>Justify-content:start</b></h2>
+
+<p>The value "start" will align the grid at the beginning of the container:</p>
+
+<div class="grid-container-Justify-content-start">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>Justify-content:end</b></h2>
+
+<p>The value "end" will align the grid at the end of the container:</p>
+
+<div class="grid-container-Justify-content-end">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>Justify-content:Center</b></h2>
+
+<p>The value "center" will align the grid at the center of the container:</p>
+
+<div class="grid-container-Justify-content-center">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>Justify-content:space-between</b></h2>
+
+<p>The value "space-between" will give the columns equal amount of space between them:</p>
+
+<div class="grid-container-Justify-content-space-between">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>Justify-content:space-evenly</b></h2>
+
+<p>The value "space-evenly" will give the columns equal amount of space between, and around them:</p>
+
+<div class="grid-container-Justify-content-space-evenly">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>Justify-content:space-around</b></h2>
+
+<p>The value "space-around" will give the columns equal amount of space around them:</p>
+
+<div class="grid-container-Justify-content-space-around">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h1><b>The align-content Property</b></h1>
+<p>The align-content property is used to vertically align the whole grid inside the container.</p>
+
+<ul>
+    <li>align-content:start</li>
+    <li>align-content:End</li>
+    <li>align-content:center</li>
+    <li>align-content:space-between</li>
+    <li>align-content:space-evenly</li>
+    <li>align-content:space-around</li>
+</ul>
+
+<h2><b>align-content:start</b></h2>
+
+<p>The value "start" will align the grid at the beginning of the container:</p>
+
+<div class="grid-container-align-content-start">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>align-content:end</b></h2>
+
+<p>The value "end" will align the grid at the end of the container:</p>
+
+<div class="grid-container-align-content-end">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>align-content:Center</b></h2>
+
+<p>The value "center" will align the grid at the center of the container:</p>
+
+<div class="grid-container-align-content-center">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>align-content:space-between</b></h2>
+
+<p>The value "space-between" will give the columns equal amount of space between them:</p>
+
+<div class="grid-container-align-content-space-between">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>align-content:space-evenly</b></h2>
+
+<p>The value "space-evenly" will give the columns equal amount of space between, and around them:</p>
+
+<div class="grid-container-align-content-space-evenly">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<h2><b>align-content:space-around</b></h2>
+
+<p>The value "space-around" will give the columns equal amount of space around them:</p>
+
+<div class="grid-container-align-content-space-around">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+
+<h2><b>CSS Grid Item</b></h2>
+<p>A grid container contains grid items. <br>
+
+  By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.</p>
+
+  <h2><b>The grid-column Property:</b></h2>
+  <p>The grid-column property defines on which column(s) to place an item.
+
+    we define where the item will start, and where the item will end.</p>
+
+    <p>Item1 will start on column 1 and end before column 5:</p>
+
+    <div class="syntax"> <br>
+      <h3> syntax : </h3> <br>
+      .grid-container { <br>
+        grid-column: 1 / 5; <br>
+        }  
+  </div>
+
+<div class="grid-item-container">
+  <div class="iteem1">1</div>
+  <div class="iteem2">2</div>
+  <div class="iteem3">3</div>  
+  <div class="iteem4">4</div>
+  <div class="iteem5">5</div>
+  <div class="iteem6">6</div>
+  <div class="iteem7">7</div>
+  <div class="iteem8">8</div>  
+  <div class="iteem9">9</div>
+  <div class="iteem10">10</div>
+  <div class="iteem11">11</div>
+  <div class="iteem12">12</div>
+  <div class="iteem13">13</div>
+  <div class="iteem14">14</div>
+  <div class="iteem15">15</div>
+</div>
+
+
+<h2><b>The grid-row Property:</b></h2>
+<p>Use the <em>grid-row</em> property to specify where to place an item.</p>
+  <p>Item1 will start on row 1 and span 2 rows:</p>
+
+  <div class="grid-row-container">
+    <div class="itemm1">1</div>
+    <div class="itemm2">2</div>
+    <div class="itemm3">3</div>  
+    <div class="itemm4">4</div>
+    <div class="itemm5">5</div>
+    <div class="itemm6">6</div>
+    <div class="itemm7">7</div>
+    <div class="itemm8">8</div>  
+    <div class="itemm9">9</div>
+    <div class="itemm10">10</div>
+    <div class="itemm11">11</div>
+    <div class="itemm12">12</div>
+    <div class="itemm13">13</div>
+    <div class="itemm14">14</div>
+    <div class="itemm15">15</div>
+    <div class="itemm16">16</div>
+  </div>
+
+  <h2><b>The grid-area Property</b></h2>
+  <p>we can use the <em>grid-area</em> property to specify where to place an item.</p>
+
+  <div class="syntax"> syntax : 
+<p>grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p> </div>
+
+<p>Item6 will start on row-line 1 and column-line 2, and end on row-line 4 column-line 5:</p> 
+           
+<div class="grid-area-container">
+  <div class="itm1">1</div>
+  <div class="ite2">2</div>
+  <div class="itm3">3</div>  
+  <div class="itm4">4</div>
+  <div class="itm5">5</div>
+  <div class="itm6">6</div>
+  <div class="itm7">7</div>
+  <div class="itm8">8</div>  
+  <div class="itm9">9</div>
+  <div class="itm10">10</div>
+  <div class="itm11">11</div>
+  <div class="itm12">12</div>
+  <div class="itm13">13</div>
+  <div class="itm14">14</div>
+  <div class="itm15">15</div>
+</div>
+
+<h2><b>Naming Grid Items</b></h2>
+<p>The grid-area property can also be used to assign names to grid items.</p>
+
+<h3>Grid Layout : 2-dimension</h3>
+<div class="page">
+ <div class="page-header">Header</div>
+ <div class="page-body">body</div>
+ <div class="page-sidebar">sidebar</div>
+ <div class="page-footer">footer</div>
+</div> <br>
+
+<div class="syntax">
+  <pre>
+    .page{ <br>
+      display: grid; <br>
+      grid-template-areas:"nav-header nav-header nav-header panel-sidebar" <br>
+      "p-body p-body  p-body panel-sidebar" <br>
+      "b-footer b-footer b-footer b-footer" ; <br>
+   } <br>
+
+   .page-header{ <br>
+    grid-area: nav-header; <br>
+    background-color: red; <br>
+    padding: 15px; <br>
+  }
+  
+  .page-body{ <br>
+     grid-area: p-body; <br>
+     background-color: orange; <br>
+     padding: 15px; <br>
+  } <br>
+  
+  .page-sidebar{ <br>
+     grid-area: panel-sidebar; <br>
+     background-color: brown; <br>
+     padding: 15px; <br>
+  } <br>
+  
+  .page-footer{ <br>
+     grid-area: b-footer; <br>
+     background-color: teal; <br>
+     padding: 15px;<br>
+  } <br>
+  
+  </pre>
+</div>
+
+<h1><b>The Order of the Items</b></h1>
+<p>The grid items do not have to be displayed in the same order as they are written in the HTML code.</p>
+
+<div class="grid-order-container">
+  <div class="itema">1</div>
+  <div class="itemb">2</div>
+  <div class="itemc">3</div>  
+  <div class="itemd">4</div>
+  <div class="iteme">5</div>
+  <div class="itemf">6</div>
+</div>
+
+
+<div class="btn-last">
+<a class="next2" href="./flex-item.html">Previous Page</a>
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX_Model</title>
+    <link rel="stylesheet" href="box-model.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h1>BOX MODEL CONCEPT </h1>
+            </div>
+            <div class="box1">
+                <p class="content"><b>content</b></p>
+            </div>
+            <div class="box2">
+                <p class="Padding"><b>Padding</b></p>
+            </div>
+            <div class="box3">
+                <p class="Border"><b>Border</b></p>
+            </div>
+            <div class="box4">
+                <p class="Margin"><b>Margin</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="text1">
+            <p>In CSS, the term "box model" is used when talking about design and layout. <br> <br>
+
+                The CSS box model is essentially a box that wraps around every HTML element. <br>
+                It consists of: margins, borders, padding, and the actual content.
+                The image above illustrates the box model:</p>
+
+            <h2>Content area</h2>
+            <p class="text2">The content area, bounded by the content edge, contains the "real" content of the <br>
+                element, such as text, an image, or a video player.
+                Its dimensions are the content <br> width and the content height.
+                It often has a background color or background image.</p>
+
+            <h2>Padding area</h2>
+            <p class="text3">The padding area, bounded by the padding edge, extends the content area to <br>
+                include the element's padding. Its dimensions are the padding-box width and the <br> padding-box height.
+            </p>
+
+            <p style="color: red;">The thickness of the padding is determined by the padding-top, padding-right,
+                padding-bottom,
+                padding-left, and shorthand padding properties.</p>
+
+            <h2>Border Area</h2>
+
+            <p>The border area, bounded by the border edge, extends the padding area to include the element's borders.
+                <br>
+                Its dimensions are the border-box width and the border-box height.
+            </p>
+
+            <p style="color: green;">The thickness of the borders are determined by the border-width and shorthand
+                border properties. <br>
+                If the box-sizing property is set to border-box, the border area's size can be explicitly defined with
+                the width, <br>
+                min-width, max-width, height, min-height, and max-height properties. <br> When there is a background
+                (background-color or background-image)
+                set on a box, it extends to the outer edge of the border</p>
+
+            <h2>Margin Area</h2>
+            <p><i>The margin area, bounded by the margin edge, extends the border area to include an empty area used to
+                    separate the element from its neighbors. <br>
+                    Its dimensions are the margin box width and the margin box height.</i></p>
+
+            <p style="color: blue;">The size of the margin area is determined by the margin-top, margin-right,
+                margin-bottom, margin-left,
+                and shorthand margin properties. <br>
+                When margin collapsing occurs, the margin area is not clearly defined since margins are shared between
+                boxes.</p>
+
+
+        </div>
+    </section> <br>
+    <div class="btn-last">
+        <a class="next2" href="./css-background.html">Previous Page</a>
+        <a class="next2" href="./border-box.html" target="_blank">Next Page</a>
+    </div>
+
+
+</body>
+
+</html>

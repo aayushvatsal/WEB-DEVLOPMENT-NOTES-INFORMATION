@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Item</title>
+    <link rel="stylesheet" href="flex.item.css">
+
+</head>
+
+<body>
+    <h1><b>flex-item</b></h1>
+    <ul>
+        <li>Align-self</li>
+        <li>flex-basis</li>
+        <li>flex-grow</li>
+        <li>flex-shrink</li>
+        <li>order</li>
+        <li>flex</li>
+    </ul>
+    <h2><b>Align-self :- </b></h2>
+    <p>property will allow us to idividually control the alignment of a specific flex-item along the cross axis and it
+        overrides the
+        <br> it overrides the default values set by the "align-items" property of flex-container.
+    </p>
+    <p>The align-self property specifies the alignment for the selected item inside the flexible container. <br>
+
+        The align-self property overrides the default alignment set by the container's align-items property.</p>
+    <div class="flex-container">
+        <div class="flex-item align-self-flex-start">box-1</div>
+        <div class="flex-item">box-2</div>
+        <div class="flex-item">box-3</div>
+        <div class="flex-item">box-4</div>
+        <div class="flex-item align-self-flex-end">box-5</div>
+    </div>
+
+
+    <h1><b>Direction : column</b></h1>
+    <div class="flex-container-1">
+        <div class="flex-item-1 ">box-1</div>
+        <div class="flex-item-1 align-self-flex-start">box-2</div>
+        <div class="flex-item-1 align-self-flex-center">center</div>
+        <div class="flex-item-1 align-self-flex-end">box-4</div>
+        <div class="flex-item-1">box-5</div>
+
+    </div>
+
+    <h1><b>Flex Grow</b></h1>
+    <p>The flex-grow property specifies how much a flex item will
+        grow relative to the rest of the flex items.</p>
+
+    <h1>Flex-Grow By 2</h1>
+    <div class="flex-container-grow">
+        <div class="flex-item-2">1</div>
+        <div class="flex-item-2">2</div>
+        <div class="flex-item-2">3</div>
+        <div class="flex-item-2 flex-grow">4</div>
+        <div class="flex-item-2">5</div>
+        <div class="flex-item-2">6</div>
+        <div class="flex-item-2">7</div>
+
+    </div>
+
+    <h1>Flex-Grow By 1</h1>
+
+    <div class="flex-container-grow-1">
+        <div class="flex-item-3">box-1</div>
+        <div class="flex-item-3 flex-grow-1">box-2</div>
+        <div class="flex-item-3">box-3</div>
+    </div>
+    <h1><b>Flex-shrink</b></h1>
+    <p>The flex-shrink property specifies how much a flex item
+        will shrink relative to the rest of the flex items.</p>
+
+    <h1>Flex-shrink By 2</h1>
+    <div class="flex-shrink">
+        <div class="flex-item-4">1</div>
+        <div class="flex-item-4">2</div>
+        <div class="flex-item-4">3</div>
+        <div class="flex-item-4 flex-shrink">4</div>
+        <div class="flex-item-4">5</div>
+        <div class="flex-item-4">6</div>
+        <div class="flex-item-4">7</div>
+    </div>
+
+    <div class="flex-container-shrink">
+        <div class="flex-item-shrink-1">Home(shrink-1)</div>
+        <div class="flex-item-shrink-2">About(shrink-2)</div>
+        <div class="flex-item-shrink-3">Serivice(shrink-3)</div>
+        <div class="flex-item-shrink-4">Contact(shrink-0)</div>
+        <div class="flex-item-shrink-5">Login</div>
+        <div class="flex-item-shrink-6">Signup</div>
+
+    </div>
+
+    <h1><b>Flex-Basis</b></h1>
+    <p>The flex-basis property specifies the initial length of a flexible item. <br>
+        it only apply on flex container</p>
+
+
+
+    <div class="flex-container-basis">
+        <div class="flex-item-5">Home</div>
+        <div class="flex-item-5">About</div>
+        <div class="flex-item-5">Serivice</div>
+        <div class="flex-item-5">Contact</div>
+        <div class="flex-item-5">Login</div>
+        <div class="flex-item-5">Signup</div>
+
+    </div>
+
+    <h1>flex property:</h1>
+    <p>shorthand of flex-grow, flex-shrink and flex-basis</p>
+
+    Example: .flex-item {
+    <pre>
+     < flex grow > < flex-shrink >  < flex-basis >
+ }
+    </pre>
+    flex: auto <br>
+    flex: initial -> never grow only shrinks to fit in the container <br>
+    flex: none -> if fully inflexible -> grow and shrink is 0 flex-basis auto
+
+    <h1><b>Order Property</b></h1>
+    <p>The order property specifies the order of a flexible item relative to the rest of the flexible items inside the
+        same container.</p>
+
+    <h1><b>Flex Direction - column</b></h1>
+
+    <div class="container">
+        <div class="flex-item ordern">Main-nav</div>
+        <div class="flex-item order1">logo</div>
+        <div class="flex-item order2">home</div>
+        <div class="flex-item order3">about</div>
+        <div class="flex-item order4">blog</div>
+        <div class="flex-item order5">contact</div>
+        <div class="flex-item order6">Pricing</div>
+        <div class="flex-item order7">Free-trial</div>
+        <div class="flex-item order8">Sign-In</div>
+        <div class="flex-item order9">Signup</div>
+    </div>
+
+    <h1><b>Flex Direction - column-reverse </b></h1>
+
+    <div class="container-column-reverse">
+        <div class="flex-item ordern">Main-nav</div>
+        <div class="flex-item order1">logo</div>
+        <div class="flex-item order2">home</div>
+        <div class="flex-item order3">about</div>
+        <div class="flex-item order4">blog</div>
+        <div class="flex-item order5">contact</div>
+        <div class="flex-item order6">Pricing</div>
+        <div class="flex-item order7">Free-trial</div>
+        <div class="flex-item order8">Sign-In</div>
+        <div class="flex-item order9">Signup</div>
+    </div>
+
+    <h1><b>Flex Direction - row </b></h1>
+
+    <div class="container-row">
+        <div class="flex-item-1 ordern">Main-nav</div>
+        <div class="flex-item-1 order1">logo</div>
+        <div class="flex-item-1 order2">home</div>
+        <div class="flex-item-1 order3">about</div>
+        <div class="flex-item-1 order4">blog</div>
+        <div class="flex-item-1 order5">contact</div>
+        <div class="flex-item-1 order6">Pricing</div>
+        <div class="flex-item-1 order7">Free-trial</div>
+        <div class="flex-item-1 order8">Sign-In</div>
+        <div class="flex-item-1 order9">Signup</div>
+    </div>
+
+    <h1><b>Flex Direction - row-reverse </b></h1>
+
+    <div class="container-row-reverse">
+        <div class="flex-item-1 ordern">Main-nav</div>
+        <div class="flex-item-1 order1">logo</div>
+        <div class="flex-item-1 order2">home</div>
+        <div class="flex-item-1 order3">about</div>
+        <div class="flex-item-1 order4">blog</div>
+        <div class="flex-item-1 order5">contact</div>
+        <div class="flex-item-1 order6">Pricing</div>
+        <div class="flex-item-1 order7">Free-trial</div>
+        <div class="flex-item-1 order8">Sign-In</div>
+        <div class="flex-item-1 order9">Signup</div>
+    </div>
+
+    <div class="btn-last">
+        <a class="next2" href="./align-item.html">Previous Page</a>
+        <a class="next2" href="./grid.html" target="_blank">Next Page</a>
+    </div>
+
+
+
+    <!-- <a class="next3" href="./cssintro.html">Previous Page</a> -->
+
+
+
+
+</body>
+
+</html>

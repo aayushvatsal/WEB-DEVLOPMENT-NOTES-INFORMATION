@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="../Arrays/arrays.css">
+</head>
+
+<body>
+
+    <h1><b>JavaScript Arrays</b></h1>
+    <p>An array is an object that can store multiple values at once. For example,</p>
+
+    <div class="example">
+        const words = ['hello', 'world', 'welcome'];
+
+        <h3>Here, words is an array. The array is storing 3 values.</h3>
+    </div>
+
+    <h1><b>Create an Array</b></h1>
+
+    <h2>We can create an array using two ways:</h2>
+
+    <h3><b>1. Using an array literal</b></h3>
+    <p>The easiest way to create an array is by using an array literal []. For example,</p>
+
+    <div class="example">
+        const array1 = ["eat", "sleep"];
+    </div>
+
+    <h3><b>2. Using the new keyword</b></h3>
+    <p>we can also create an array using JavaScript's new keyword.</p>
+    <div class="example">
+        const array2 = new Array("eat", "sleep");
+    </div>
+
+    <h2>In both of the above examples, we have created an array having two elements.</h2>
+
+    <h3><b>More examples</b></h3>
+
+    <div class="example">
+        // empty array <br>
+        const myList = [ ]; <br> <br>
+
+        // array of numbers <br>
+        const numberArray = [ 2, 4, 6, 8]; <br> <br>
+
+        // array of strings <br>
+        const stringArray = [ 'eat', 'work', 'sleep']; <br><br>
+
+        // array with mixed data types <br>
+        const newData = ['work', 'exercise', 1, true]; <br> <br>
+    </div>
+
+    <h3><b>We can also store arrays, functions and other objects inside an array. For example,</b></h3>
+
+    <div class="example">
+        const newData = [ <br>
+        {'task1': 'exercise'}, <br>
+        [1, 2 ,3], <br>
+        function hello() { console.log('hello')} <br>
+        ];
+    </div>
+
+    <h2><b>Access Elements of an Array</b></h2>
+    <p>We can access elements of an array using indices (0, 1, 2 …). For example,</p>
+
+    <div class="example">
+        const myArray = ['h', 'e', 'l', 'l', 'o']; <br> <br>
+
+        // first element <br>
+        console.log(myArray[0]); // "h" <br> <br>
+
+        // second element <br>
+        console.log(myArray[1]); // "e"
+    </div>
+
+    <h2><b>Add an Element to an Array</b></h2>
+    <ul>
+        <li>We can use the built-in method push() and unshift() to add elements to an array.</li>
+        <li>The push() method adds an element at the end of the array. </li>
+    </ul>
+
+    <div class="example">
+        let dailyActivities = ['eat', 'sleep']; <br> <br>
+
+        // add an element at the end <br>
+        dailyActivities.push('exercise'); <br> <br>
+
+        console.log(dailyActivities); // ['eat', 'sleep', 'exercise']
+    </div>
+
+    <h2><b>Array length</b></h2>
+    <p>We can find the length of an element (the number of elements in an array) using the length property.</p>
+
+    <div class="example">
+        const dailyActivities = [ 'eat', 'sleep']; <br> <br>
+
+        // this gives the total number of elements in an array <br>
+        console.log(dailyActivities.length); // 2 <br>
+    </div>
+
+    <h1><b>Array Methods</b></h1>
+    <p>In JavaScript, there are various array methods available that makes it easier to perform useful calculations.</p>
+
+    <h2><b>JavaScript Array concat()</b></h2>
+    <p>The concat() method returns a new array by merging two or more values/arrays.</p>
+
+    <div class="example">
+        let primeNumbers = [2, 3, 5, 7] <br>
+        let evenNumbers = [2, 4, 6, 8] <br> <br>
+
+        // join two arrays <br>
+        let joinedArrays = primeNumbers.concat(evenNumbers); <br>
+        console.log(joinedArrays); <br> <br>
+
+        /* Output: <br>
+        [ <br>
+        2, 3, 5, 7, <br>
+        2, 4, 6, 8 <br>
+        ]
+        */
+    </div>
+
+    <h3>Example 2.Concatenating nested arrays</h3>
+    <ul>The concat() method returns the shallow copy of the concatenated elements in the following way:</ul>
+    <li>It copies object references to the new array. (For example: passing a nested array) <br> So if the referenced object
+        is modified, the changes are visible in the returned new array.</li>
+    <li>It copies the value of strings and numbers to the new array.</li>
+
+    <div class="example">
+        var randomList = [1, 2, 3]; <br>
+        var randomNestedList = [ <br>
+        [4, 5], <br>
+        [6, 7], <br>
+        ]; <br> <br>
+
+        var combined = randomList.concat(randomNestedList); <br>
+        console.log(combined); // [ 1, 2, 3, [ 4, 5 ], [ 6, 7 ] ] <br> <br>
+
+        // changing the value 1 to 0 <br>
+        randomList[0] = 0; <br>
+        console.log(randomList); // [ 0, 2, 3 ] <br> <br>
+
+        // changes not reflected in concatenated array <br>
+        console.log(combined); // [ 1, 2, 3, [ 4, 5 ], [ 6, 7 ] ] <br> <br>
+
+        // modifying nested list (adding 6 to first element) <br>
+        randomNestedList[0].push(6); <br>
+        console.log(randomNestedList); // [ [ 4, 5, 6 ], [ 6, 7 ] ] <br> <br>
+
+        // changes are reflected in concatenated array <br>
+        // since it is a reference to the object <br>
+        console.log(combined); // [ 1, 2, 3, [ 4, 5, 6 ], [ 6, 7 ] ] <br>
+    </div>
+
+    <h2><b>Javascript Array constructor</b></h2>
+    <p>The constructor property returns the constructor function for the array.</p>
+
+    <div class="example">
+        let languages = ["JavaScript", "Java", "Python"]; <br> <br>
+
+        let constructor = languages.constructor; <br>
+        console.log(constructor) <br> <br>
+
+        // Output:
+        // [Function: Array]
+    </div>
+
+    <h2><b>Javascript Array copyWithin()</b></h2>
+    <p>The copyWithin() method copies array elements from one position to another in the given array. </p>
+
+    <div class="example">
+        <h3><b>Example 1: Using copyWithin() Method</b></h3>
+
+        let words = ["apple", "ball", "cat", "dog"]; <br> <br>
+
+
+        words.copyWithin(3, 0); <br> <br>
+
+        // modifies the original array <br>
+        console.log(words);<br> <br>
+
+        // Output: <br>
+        // [ ''apple'', ''ball'', ''cat'', ''apple'' ]
+    </div>
+
+    <h2><b>Javascript Array entries()</b></h2>
+    <p>The entries() method returns a new Array Iterator object containing key/value pairs for each array index.</p>
+
+    <div class="example">
+        // defining an array named alphabets <br>
+        const alphabets = ["A", "B", "C"]; <br> <br>
+
+        // array iterator object that contains <br>
+        // key-value pairs for each index in the array <br>
+        let iterator = alphabets.entries(); <br> <br>
+
+        // iterating through key-value pairs in the array <br>
+        for (let entry of iterator) { <br>
+        console.log(entry);
+        }
+
+        // Output:
+        // [ 0, 'A' ]
+        // [ 1, 'B' ]
+        // [ 2, 'C' ]
+    </div>
+
+    <h2><b>JavaScript Array.every()</b></h2>
+    <p>The every() method checks if all the array elements pass the given test function.</p>
+
+    <div class="example">
+        // function that checks whether <br>
+        // the age is 18 or above <br>
+        function checkAdult(age) { <br>
+        return age >= 18; <br>
+        } <br> <br>
+
+        const ageArray = [34, 23, 20, 26, 12]; <br> <br>
+
+        //checks if all the array elements <br>
+        // pass the checkAdult() function <br>
+        let check = ageArray.every(checkAdult); <br> <br>
+
+        // Output: false
+    </div>
+
+    <h3><b>Example 1: Check if Array Elements Are Even</b></h3>
+    <div class="example">
+        // function that checks whether all <br>
+        // the array elements are even or not <br>
+        function checkEven(num) { <br>
+        return num%2 === 0; <br>
+        } <br> <br>
+
+        // create an array of numbers <br>
+        const numbers = [2, 4, 6, 7, 8]; <br> <br>
+
+        // use the every() method along with <br>
+        // checkEven() on the numbers array <br>
+        let check = numbers.every(checkEven); <br> <br>
+
+        console.log(check) <br> <br>
+
+        // Output: false
+    </div>
+
+    <h3><b>Example 2: JavaScript every() With Arrow Function</b></h3>
+    <div class="example">
+        let numbers = [ 1 , 2 , 3 , 4 , 5]; <br> <br>
+
+        // use arrow function with every() <br>
+        let result = numbers.every(element => element < 6); <br>
+            console.log(result); <br> <br>
+
+            // Output: true
+    </div>
+
+    <h2><b>JavaScript Array fill()</b></h2>
+    <p>The fill() method returns an array by filling all elements with a specified value.</p>
+
+    <div class="example">
+        // defining an array <br>
+        var fruits = ['Apple', 'Banana', 'Grape']; <br> <br>
+
+        // filling every element of the array with 'Cherry' <br>
+        fruits.fill("Cherry"); <br> <br>
+
+        console.log(fruits); <br> <br>
+
+        // Output: <br>
+        // [ 'Cherry', 'Cherry', 'Cherry' ]
+    </div>
+
+    <h1><b>Example 1: Using fill() Method</b></h1>
+
+    <div class="example">
+        var prices = [651, 41, 4, 3, 6]; <br> <br>
+
+        // filling every element of the array with '5' <br>
+        new_prices = prices.fill(5); <br> <br>
+
+        console.log(prices); <br> <br>
+
+        console.log(new_prices); <br>
+
+        Output : <br>
+        [ 5, 5, 5, 5, 5 ] <br>
+        [ 5, 5, 5, 5, 5 ]
+
+
+    </div>
+
+    <h2><b>Javascript Array filter()</b></h2>
+    <p>The filter() method returns a new array with all elements that pass the test defined by the given function.</p>
+
+    <div class="example">
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; <br> <br>
+
+        // function to check even numbers <br>
+        function checkEven(number) { <br>
+        if (number % 2 == 0) <br>
+        return true; <br>
+        else <br>
+        return false; <br>
+        } <br> <br>
+
+        // create a new array by filter even numbers from the numbers array <br>
+        let evenNumbers = numbers.filter(checkEven); <br>
+        console.log(evenNumbers); <br> <br>
+
+        // Output: [ 2, 4, 6, 8, 10 ]
+    </div>
+
+    <h3><b>Example 1: Filtering out values from Array</b></h3>
+
+    <div class="example">
+        const prices = [1800, 2000, null, 3000, 5000, "Thousand", 500, 8000] <br> <br>
+
+        function checkPrice(element) { <br>
+        return element > 2000 && !Number.isNaN(element); <br>
+        } <br> <br>
+
+        let filteredPrices = prices.filter(checkPrice); <br>
+        console.log(filteredPrices); // [ 3000, 5000, 8000 ] <br> <br>
+
+        // using arrow function <br>
+        let newPrices = prices.filter((price) => (price > 2000 && !Number.isNaN(price))); <br>
+        console.log(newPrices); // [ 3000, 5000, 8000 ] <br>
+
+        OutPut : <br>
+        [ 3000, 5000, 8000 ] <br>
+        [ 3000, 5000, 8000 ]
+    </div>
+
+    <h2><b>JavaScript Array find()</b></h2>
+    <p>The find() method returns the value of the first array element that satisfies the provided test function.</p>
+
+    <div class="example">
+        let numbers = [1, 3, 4, 9, 8]; <br> <br>
+
+        // function to check even number <br>
+        function isEven(element) { <br>
+        return element % 2 == 0; <br>
+        } <br> <br>
+
+        // get the first even number <br>
+        let evenNumber = numbers.find(isEven); <br>
+        console.log(evenNumber); <br> <br>
+
+        // Output: 4
+    </div>
+
+    <h2><b>JavaScript Array findIndex()</b></h2>
+    <p>The findIndex() method returns the index of the first array element that satisfies the provided test function or
+        else returns -1.</p>
+
+    <div class="example">
+        // function that returns odd number <br>
+        function isOdd(element) { <br>
+        return element % 2 !== 0; <br>
+        } <br> <br>
+
+        // defining an array of integers <br>
+        let numbers = [2, 8, 1, 3, 4]; <br> <br>
+
+        // returns the index of the first odd number in the array <br>
+        let firstOdd = numbers.findIndex(isOdd); <br> <br>
+
+        console.log(firstOdd); <br>
+
+        // Output: 2
+    </div>
+
+    <h2><b>JavaScript Array flat()</b></h2>
+    <p>The flat() method creates a new array by flattening a nested array up to the specified depth. </p>
+
+    <div class="example">
+        // 3 nested arrays <br>
+        let numbers = [1, 2, [3, 4, [5, 6, [7, 8]]]]; <br> <br>
+
+        // reducing nesting by flattening the array to depth 2 <br> 
+        let flattenArray = numbers.flat(2); <br> <br>
+
+        // new flatten array <br>
+        console.log(flattenArray); <br> <br>
+
+        // Output: <br>
+        // [ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ] 
+    </div>
+
+
+
+    <div class="btn-last">
+        <a class="next2" href="/JavaScript/SCOPE/scope.html">Previous Page</a>
+        <a class="next2" href="/JavaScript/Regex/regex.html" target="_blank">Next Page</a>
+    </div>
+</body>
+
+</html>

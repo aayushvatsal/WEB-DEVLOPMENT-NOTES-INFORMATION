@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><b>Variables</b></h1>
+    <p>In JavaScript, a variable is a name given to a memory location that is used to store any type of data. <br>
+        As the name suggests, variables mean it can vary, i.e., data stored in a variable can be changed or updated
+        later in the program if required</p>
+
+        <h2><b>In JavaScript, there are only two types of variable scopes:</b></h2>
+
+        <ul>
+            <li>Global scope</li>
+            <li>Local scope</li>
+        </ul>
+
+    <h2><b>JavaScript Identifiers</b></h2>
+    <p>To declare a Javascript variable, one must know the rules to follow</p>
+    <h3>Rules to follow</h3>
+    <ul>
+        <li>Variables are case-sensitive in Javascript. This means that <em>schoolName</em> and <em>schoolname</em> are
+            considered different variables.</li>
+        <li>We can use letters, digits, symbols like dollar sign ($) and underscore ( _ ) in a variable name.</li>
+        <li>We <em>cannot</em> start a variable name with a digit (0-9).</li>
+        <li>We cannot use any of the reserved keywords (function, return, typeof, break, etc.) of Javascript as a
+            variable name.</li>
+    </ul>
+
+    <h3><b>Important Points:</b></h3>
+    <ul>
+        <li>Javascript allows multiple white spaces and even line breaks in a declaration of a variable.</li>
+        <li>We can separate different variable declarations using a comma.</li>
+        <li>In Javascript, we can store any type of value in a variable and also change it at any time.</li>
+    </ul>
+
+    <h1>Examples</h1>
+    <p>
+    <ol>
+        <li>Declaring a JavaScript variable using line breaks and spaces: <br>
+            <br>
+            <div class="border"> var a = 25;</div>
+        </li> <br>
+        <br>
+        <li>Declaring two variables in a single line separated by comma: <br>
+            <br>
+            <div class="border"> var b=1, c=2; </div>
+        </li>
+        <br>
+        <br>
+        <li>Using reserve keywords while declaring a variable:
+            <div class="border"> var return = 5; //Will give error, as return is a keyword in Javascript </div>
+        </li>
+        <br>
+        <br>
+        <li>Valid variable name examples:
+            <div class="border">
+                var my_school; //using underscore <br>
+                var one$23; //using digit and dollar sign </div>
+        </li> <br>
+        <br>
+        <li>Invalid variable name examples:
+            <div class="border">
+                var 123name ; //variable cannot start with a digit <br>
+                var variable@ ; //variable cannot contain '@' symbol <br>
+                var break; //break is a reserved keyword in JS, so we can't use it as a variable <br>
+            </div>
+        </li>
+    </ol>
+
+    <h2><b>Declaring a Variable</b></h2>
+    <h3><b>Using var:</b></h3>
+    <div class="border">
+        var age = 25; // Declaring a variable using 'var' <br>
+        var name = "John"; <br>
+    </div>
+    <h3><b>Using let:</b></h3>
+    <div class="border">
+        let count = 0; // Declaring a variable using 'let' <br>
+        let message = "Hello, world!"; <br>
+    </div>
+    <h3><b>Using const:</b></h3>
+    <div class="border">
+        const pi = 3.14159; // Declaring a constant variable using 'const' <br>
+        const username = "jsmith"; <br>
+    </div>
+    <h3><b>Mixed Keyword:</b></h3>
+    <div class="border">
+        var x = 10; // Declaring a variable using 'var' <br>
+        let y = 20; // Declaring a variable using 'let' <br>
+        const z = 30; // Declaring a constant variable using 'const' <br>
+    </div>
+    </p>
+
+    <h1><b>Initializing a Variable</b></h1>
+    <p>After we have declared a variable, we can initialize that variable with a value. <br>
+        This initialization can be done by just writing the variable name followed by an equals sign and then the value
+        we want the variable to store.</p>
+    <div class="border">
+        schoolName = 'XYZ School'; //schoolName stores "XYZ School" <br>
+        address = 'abc'; //address stores "abc" <br>
+    </div>
+
+    <p>
+        Now, try writing these lines in the console. After writing these lines, we can write only the variable names and
+        <br>
+        press enter, the output will be the value stored in it. <br>
+    </p>
+
+    <div class="border">
+        schoolName; //output: XYZ School <br>
+        address ; //output: abc <br>
+    </div>
+
+    <h3><b> Note: we can even declare and initialize a variable in a single line. Example:</b></h3>
+
+    <div class="border"> var age = 20; //declaring and initializing at the same time </div>
+
+    <h1><b>When to Use var, let, or const?</b></h1>
+    <p>In JavaScript, we should choose between var, let, or const based on the intended behavior of our variables</p>
+
+    <h2><b>Var</b></h2>
+    <p>Use var when you need to declare variables with a function-level scope. <br>
+        It was the traditional way of declaring variables in JavaScript but is less commonly used in modern JavaScript.
+    </p>
+
+    <h3> Example :</h3>
+    <div class="border">
+        function exampleFunction() { <br>
+        var x = 10; <br>
+        // 'x' is function-scoped
+        }
+    </div>
+
+    <h2><b>let</b></h2>
+    <p>Use let when we need block-level scope or we intend to reassign the variable. <br>
+        It's the preferred choice for most variables in modern JavaScript.</p>
+
+    <h3> Example :</h3>
+    <div class="border">
+        if (true) { <br>
+        let y = 20; <br>
+        // 'y' is block-scoped <br>
+        }
+    </div>
+    <h2><b>const:</b></h2>
+    Use const when you want to declare a variable that should not be reassigned. <br>
+    It's also block-scoped like let, but you cannot reassign values to variables declared with const. <br>
+    You should use const for values that should remain constant throughout their scope. <br>
+
+    <h3><b>Example:</b></h3>
+    <div class="border">
+        const PI = 3.14159; <br>
+        // 'PI' is a constant and cannot be reassigned
+    </div>
+
+    <h2><b>Example 1:</b></h2> <br>
+    <br>
+
+    <div class="border"> <br>
+
+        let x = 1; //doesn't get added to the window object <br>
+        var y = 2; //gets added to the window object <br>
+
+        console.log(window.x); // output: undefined <br>
+        console.log(window.y); // output: 2 <br>
+
+    </div>
+
+    <h2><b>Example 2:</b></h2>
+    <br>
+    <br>
+
+    <div class="border"> <br>
+        function scopes(){ <br>
+        var x = 2; <br>
+        let y = 3; <br>
+        } <br>
+
+        console.log(x); // will result in a referenceError. <br>
+        console.log(y); // will result in a referenceError. <br>
+
+    </div> <br>
+
+    In this case, the scope of the variables x and y is only limited to the function, <br>
+    that’s why we cannot find the reference to the variables x and y outside the function, thus resulting in the
+    reference error. <br>
+
+    <h1><b>Updating a Variable</b></h1>
+  
+    <p>
+Once a variable is declared or initialized, we can change its value anytime and anywhere within its scope. <br>
+It is similar to re-initializing the variable. <br>
+We can update/change the value by just typing the variable name followed by an equals sign and then followed by the new value we want it to store.
+</p>
+<br>
+<br>
+
+<h3>Example:</h3>
+<br>
+<br>
+
+<div class="border">
+var variable = 10;// at first the value is 10 <br>
+
+variable = 15; // the value gets updated to 15 <br>
+variable = 20; // now the value is 20 for the variable <br>
+
+</div>
+
+<h1><b>Variable Types</b></h1> 
+
+<h2><b>Numbers:</b></h2> 
+
+<p> 
+In JavaScript, numbers are used to represent numeric data, including integers and floating-point numbers (decimals). <br>
+Numbers can be used for mathematical operations such as addition, subtraction, multiplication, and division. <br>
+</p>
+
+<h2><b>Strings:</b></h2> 
+
+<p> 
+Strings are sequences of characters enclosed within single (''), double ("") or backticks (``) quotes. <br>
+They are used to represent textual data, such as words, sentences, or any combination of characters. <br>
+</p>
+
+<h2><b>Booleans:</b></h2>
+
+
+<p>
+Booleans are a data type with only two possible values: true or false. <br>
+They are commonly used for making decisions in conditional statements or controlling the flow of a program. <br>
+</p> 
+
+<h2><b>Arrays:</b></h2> 
+<p> 
+Arrays are ordered collections of data, where each element can be of any data type (including other arrays). <br>
+They are defined using square brackets [] and can be accessed by their index. <br>
+</p> 
+
+
+<h2><b>Objects:</b></h2> 
+<p> 
+Objects are collections of key-value pairs, where each key is a string (or symbol in more recent versions of JavaScript), and the values can be of any data type. <br>
+Objects are used to represent complex and structured data. They are often used to model real-world entities or data structures. <br>
+Objects can have methods, which are functions associated with them, and properties, which are variables associated with them. <br>
+</p>
+
+<h3><b>Examples :</b></h3>
+<div class="border">
+    var variable = "Hello World!"; <br>
+    <br>
+//lets print the data type of this variable <br>
+console.log(typeof(variable)); //this will print 'string' <br>
+<br>
+//Now let's update the value to a number <br>
+variable = 2; //By this line, we update the value of variable to 2 <br>
+
+<br>
+<br>
+<br>
+
+//Now let's print the data type of updated variable <br>
+console.log(typeof(variable)); //This will print: 'number', since 2 is a number <br>
+
+</div>
+
+
+
+<br> <br>
+<div class="btn-last">
+ <a class="next2" href="../Introduction To Javascropt/bascisof javascript.html">Previous Page</a> 
+<a class="next2" href="../Variables-And-Data-Type/conversions.html" target="_blank">Next Page</a> 
+</div>
+</body>
+
+</html>

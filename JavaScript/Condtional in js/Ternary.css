@@ -1,0 +1,88 @@
+body {
+    color: white;
+    background-color: black;
+    /* background-image:linear-gradient(to bottom, rgba(0,155,0,0.4), rgba(0,0,0230,0.4) ); */
+}
+
+h1 {
+    color: goldenrod;
+}
+
+h2 {
+    color: deeppink;
+}
+
+h3 {
+    color: plum;
+}
+
+
+.syntax {
+    border: 2px solid gold;
+    border-radius: 20px;
+    text-align: center;
+    height: 20%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.example{
+    border: 2px solid rgba(176, 119, 40, 0.647);
+    border-radius: 10px;
+    text-align: center;
+    height: 20%;
+    width: 60%;
+    
+}
+.next2 {
+    background-color: #1309c8;
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 0.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.next2::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.next2:hover::before {
+    transform: scaleX(1);
+}
+
+.next2:hover {
+    border: solid #989805;
+    color: black;
+}
+
+.btn-last {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 850px;
+    margin-top: 20px;
+}
+
+.btn-last a {
+    text-decoration: none;
+}

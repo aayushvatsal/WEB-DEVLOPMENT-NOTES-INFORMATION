@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <link rel="stylesheet" href="CSS_Selector.css">
+</head>
+
+<body>
+    <h1><b>CSS Selector</b></h1>
+    <p>
+    <h3><b>CSS selectors</b></h3> are used to select the content we want to style. Selectors are the part of CSS rule
+    set. <br>
+    CSS selectors select HTML elements according to its id, class, type, attribute etc. </p>
+
+    <h3><b>There are several different types of selectors in CSS.</b></h3>
+    <ol>
+        <li><b>CSS Element Selector</b></li>
+        <li><b>CSS Id Selector</b></li>
+        <li><b>CSS Class Selector</b></li>
+        <li><b>CSS Universal Selector</b></li>
+        <li><b>CSS Group Selector</b></li>
+    </ol>
+
+    <h1><b>CSS Element Selector</b></h1>
+    <p>The element selector selects the HTML element by name.</p>
+    <div class="syntax">
+        <h3>Syntax : </h3> <br>
+        a { <br>
+        text-align: center; <br>
+        color: red; <br>
+        }
+
+    </div> <br>
+
+    Here, all
+    <pre> < a > </pre> elements on the page will be center-aligned, with a red text color:
+
+    <h1><b>CSS Id Selector :</b></h1>
+    <p>The id selector selects the id attribute of an HTML element to select a specific element. <br>
+        An id is always unique within the page so it is chosen to select a single, unique element. </p>
+
+    <h4 style="color: orange;">It is written with the hash character (#), followed by the id of the element.</h4>
+    <div class="syntax">
+        <h3>syntax :</h3> <br>
+        #para1 { <br>
+        text-align: center; <br>
+        color: green; <br>
+        }
+    </div> <br>
+    <p>The CSS rule will be applied to the HTML element with id="para1": </p>
+
+    <h1><b>CSS Class Selector :</b></h1>
+    <p>The class selector selects HTML elements with a specific class attribute. <br>
+    <h4 style="color: orange;"> It is used with a period character . (full stop symbol) followed by the class name.
+    </h4>
+    </p>
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        .box1 { <br>
+        text-align: center; <br>
+        color: green; <br>
+        }
+    </div> <br>
+
+    <h1><b>CSS Universal Selector</b></h1>
+    <p>The universal selector is used as a wildcard character. It selects all the elements on the pages.</p>
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        *{ <br>
+        text-align: center; <br>
+        color: green; <br>
+        }
+    </div> <br>
+
+    <h4 style="color: orange;">The CSS rule below will affect every HTML element on the page: </h4>
+
+    <h1><b>CSS Group Selector</b></h1>
+    <p>The grouping selector is used to select all the elements with the same style definitions. </p> <br>
+
+    <p>Grouping selector is used to minimize the code. <br>
+    <h4 style="color: gold;">Commas are used to separate each selector in grouping.</h4>
+    </p>
+
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        h1 { <br>
+        text-align: center; <br>
+        color: red; <br>
+        } <br>
+
+        h2 { <br>
+        text-align: center; <br>
+        color: red; <br>
+        } <br>
+
+        p { <br>
+        text-align: center; <br>
+        color: red; <br>
+        } <br>
+    </div> <br>
+
+    <p>It will be better to group the selectors, to minimize the code. <br>
+
+        To group selectors, separate each selector with a comma.</p>
+
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        h1, h2, p{ <br>
+        text-align: center; <br>
+        color: green; <br>
+        }
+    </div> <br>
+
+    <h1><b>CSS Combinators</b></h1>
+    <p>A combinator is something that explains the relationship between the selectors.</p>
+
+    <h2><b>There are four different combinators in CSS:</b></h2>
+    <h3>
+        <ul>
+            <li>descendant selector (space)</li>
+            <li>child selector (>)</li>
+            <li>adjacent sibling selector (+)</li>
+            <li>general sibling selector (~)</li>
+        </ul>
+    </h3>
+
+    <h1><b> Descedent Selector</b></h1>
+    <p>The Descendant combinator is represented using a single space. <br>
+        It combines two selectors in which the first selector represents an ancestor (parent, parent's parent, etc.),
+        and the second selector represents descendants. </p>
+
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        first_selector second_selector { <br>
+        css properties: values; <br>
+        }
+    </div> <br>
+
+    <ul>
+        <li>A first simple selector (first_selector) represents an ancestor element, <br>
+            while a second simple selector (second_selector) represents a descendant element.</li>
+    </ul>
+
+    <h3><b>Let us understand the above syntax representation with the following example:</b></h3>
+
+    <div class="syntax">
+        <h3>syntax : </h3> <br>
+        h2 p { <br>
+        background-color: blue; <br>
+        font-size: 2rem; <br>
+        }
+    </div> <br>
+
+    <ul>
+        <li>Here, h2 acts as the ancestor element while p is the descendant element.</li>
+        <li><b style="color: chartreuse;">The white space between the two elements represents the descendant
+                selector.</b></li>
+    </ul>
+    <h2><b></b></h2>
+
+
+    <h1><b>Child Selector </b></h1>
+    <p>The child selector selects all elements that are the children of a specified element. <br>
+
+        The following example selects all
+    <p> elements that are children of a
+    <div> element:</p>
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            div > p { <br>
+            background-color: powderblue; <br>
+            }
+        </div> <br>
+
+        <h1><b>Adjacent Sibling Selector </b></h1>
+        <p>An adjacent sibling combinator selector allows us to select an element that is directly after another
+            specific element.</p> <br>
+
+        <p> it selects those elements that are nested under the same parent as a specified element and also appear
+            immediately after that element.</p>
+
+        <h4>
+            <p>The adjacent sibling selector is represented by a plus (+) sign in between two selectors. <br>
+                The second selector represents the element that is to be selected when it appears immediately after an
+                element represented by the first selector, <br>
+                provided both the elements are children of the same parent.</p>
+        </h4>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            h1 + p { <br>
+            background-color: powderblue; <br>
+            }
+        </div> <br>
+
+        <h1><b>General sibling selector</b></h1>
+
+        <p>The general sibling selector it selects those elements in a document that are nested under the same parent
+            element as a specified element and is also present after that element.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            h1 ~ p { <br>
+            background-color: powderblue; <br>
+            }
+        </div> <br>
+
+        <h1><b>Pseudo Class Selector </b></h1>
+        <p>pseudo-class selector is a keyword added to a selector that specifies a special state of the selected
+            elements.</p>
+        <p>It can be combined with a CSS selector to add an effect to existing elements based on their states.</p>
+
+        <h2><b>Here are some common pseudo-classes in CSS:</b></h2>
+
+        <h3><b> 1. :hover - </b></h3>
+        <p>Selects and styles an element when the user hovers over it.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            a:hover { <br>
+            color: red; <br>
+            }
+        </div> <br>
+
+
+        <h3><b> 2. :active - </b></h3>
+        <p>Selects and styles an element while it is being activated (e.g., clicked).</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            button:active { <br>
+            background-color: #00ff00; <br>
+            }
+
+        </div> <br>
+
+
+        <h3><b> 3. :focus - </b></h3>
+        <p>Selects and styles an element when it has focus.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            input:focus { <br>
+            border: 2px solid blue; <br>
+            } <br>
+        </div> <br>
+
+        <h3><b> 4. :link - </b></h3>
+        <p>when the link has not yet been clicked.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            a:link { <br>
+            color: green; <br>
+            } <br>
+        </div> <br>
+
+        <h3><b> 5. :nth-child() - </b></h3>
+        <p>Selects and styles elements based on their position within a parent.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            li:nth-child(odd) { <br>
+            background-color: #f0f0f0; <br>
+            }
+
+        </div> <br>
+
+
+        <h3><b> 6. :first-child, :last-child - </b></h3>
+        <p>Selects the first or last child of a parent element.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            li:first-child { <br>
+            font-weight: bold; <br>
+            } <br>
+
+            li:last-child { <br>
+            color: red; <br>
+            }
+
+
+        </div> <br>
+
+        <h3><b> 7. :nth-of-type() - </b></h3>
+        <p>Selects and styles elements based on their position among siblings of the same type.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            p:nth-of-type(2n) { <br>
+            color: #3366cc; <br>
+            } <br>
+
+        </div> <br>
+
+        <h1><b>Pseudo Element Selector</b></h1>
+        <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+        <h4 style="color: chartreuse;"><b>We have used the double colon notation (::pseudo-element) in the syntax.</b>
+        </h4>
+
+        <h2><b>The ::first-letter Pseudo-element</b></h2>
+        <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+        <p>It affects the first letter of the text. It can be applied only to block-level elements.</p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            p::first-letter { <br>
+            color: #ff0000; <br>
+            font-variant: small-caps; <br>
+            }
+
+        </div> <br>
+
+        <h1 class="a"> Welcome to the edureify.com </h1>
+        <h2 class="b"> This is an example of ::first-letter pseudo-element. </h2>
+
+        <h2><b>The ::first-line pseudo-element</b></h2>
+        <p>It affects the entire line.
+            It adds the special effects to the first line of the text. </p>
+
+        <div class="syntax">
+            <h3>syntax : </h3> <br>
+            p::first-line { <br>
+            color: #ff0000; <br>
+            font-variant: small-caps; <br>
+            }
+
+        </div> <br>
+
+        <p class="c"> Welcome to the edureify.com. This site is developed so that students may learn Mern Stack related
+            technologies easily.
+            The edureify.com is committed to provide easy and in-depth tutorials on various technologies. </p>
+        <p class="d"> This is an example of ::first-line pseudo-element. </p>
+
+        <h1><b>The ::before pseudo-element</b></h1>
+        <p>It allows us to add something before the element's content. It is used to add something before the specific
+            part of an element. <br>
+            Generally, it is used with the content property.</p>
+
+        <h1 class="e">Welcome to the eduriefy.com. </h1>
+        <h2> This is an example of ::before pseudo-element. </h2>
+        <h3> In the first line the "Hello-Reader" has added by using the pseudo-element ::before </h3>
+
+        <h1><b>The ::after pseudo-element</b></h1>
+        <p> It inserts the content after the content of the element. It is used to add something after the specific part
+            of an element. </p>
+
+        <h1 class="f"> Hello-Reader. </h1>
+        <h2> This is an example of ::after pseudo-element. </h2>
+        <h3> In the first line the "Welcome to the edureify.com." has added by using the pseudo-element ::after </h3>
+
+
+
+
+
+
+
+
+
+        <br>
+        <br>
+
+
+
+        <div class="btn-last">
+            <a class="next2" href="./cssintro.html">Previous Page</a>
+            <br>
+            <br>
+            <a class="next2" href="./csstype.html" target="_blank">Next Page</a>
+            
+        </div>
+
+</body>
+
+</html>

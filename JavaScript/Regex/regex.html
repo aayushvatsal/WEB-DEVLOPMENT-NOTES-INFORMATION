@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <link rel="stylesheet" href="../Regex/regex.css">
+</head>
+
+<body>
+
+    <h1><b>JavaScript Regex</b></h1>
+    <p>In JavaScript, a Regular Expression (RegEx) is an object that describes a sequence of characters used for
+        defining a search pattern. For example,</p>
+
+    <div class="example">
+        /^a...s$/
+
+        <p>The above code defines a RegEx pattern. The pattern is: any five letter string starting with a and ending
+            with s.</p>
+    </div>
+
+    <h2><b>Create a RegEx</b></h2>
+    <p>There are two ways you can create a regular expression in JavaScript.</p>
+
+    <h3><b>Using a regular expression literal:</b></h3>
+    <p>The regular expression consists of a pattern enclosed between slashes /. For example, </p>
+    <div class="example">
+        cost regularExp = /abc/;
+
+        Here, /abc/ is a regular expression.
+    </div>
+
+    <h2><b>Regular Expression Syntax</b></h2>
+    <ul>
+        <li>Brackets</li>
+        <li>Quantifiers</li>
+        <li>LookAround Assertion</li>
+        <li>Character Literals</li>
+        <li>MetaCharacter</li>
+    </ul>
+
+    <h2><b>Brackets</b></h2>
+    <p class="bracket">[ ]</p>
+    <p>Brackets indicate a set of characters to match. Any individual character between the brackets will match, <br>
+        and we can also use a hyphen to define a set.</p>
+    <ul>
+        <li> if we put in hyphen (-) between two characters inside square brackets, it means range.</li>
+        <li>[a-z] [A-Z] [a-Z] [0-9]</li>
+        <li>we can use the ^ metacharacter to negate what is between the brackets.</li>
+        <li>Telling the regex engine or our programming language not to match those characters.</li>
+        <li>[^a-c] <h3><b>not included a to c</b></h3>
+        </li>
+        <li>([a-zA-Z0-9_\-\]{8,})</li>
+    </ul>
+
+    <p class="bracket">{ }</p>
+
+    <p>Curly braces are used to specify an exact amount of things to match. They are used after an expression</p>
+
+    <div class="example">
+        \na{2}\ will only match 'na' exactly twice. <br> <br>
+
+        'panama'.match(/na{2}/) // -> no match <br>
+        'banana'.match(/na{2}/) // -> matches 'nana' <br>
+
+    </div>
+
+    <p>we can use these in conjunction with a comma to specify more than one amount. </p>
+    <h3><b>{2,} = two or more times, {2,4} = between two and four times.</b></h3>
+
+    <div class="example">
+        'banana'.match(/a{2,4}/) // -> no match <br>
+        'bananaa'.match(/a{2,4}/) // -> matches 'aa' <br>
+        'bananaaa'.match(/a{2,4}/) // -> matches 'aaa' <br>
+        'bananaaaa'.match(/a{2,4}/) // -> matches 'aaaa' <br>
+        'bananaaaaaaaaaaa'.match(/a{2,4}/) // -> matches 'aaaa' <br>
+    </div>
+
+    <p class="bracket">( )</p>
+    <p>Parentheses represent remembered matches. This is especially useful for find-and-replace operations or any time
+        <br>
+        we need to do something with part of the match. When a match is remembered <br>
+        we can use $n to refer to it, starting with $1 up to $9, or with $& to refer to the entire match.
+    </p>
+
+    <h2><b>Quantifiers[Frequency]</b></h2>
+    <p> In regular expressions, quantifiers are metacharacters that specify how many times the previous character or
+        group should be matched. <br> <br>
+
+        Quantifiers allow you to specify the number of occurrences of a character or group, making it easier to match
+        patterns of varying lengths. </p>
+
+
+    <div class="quantifiers">
+        <h3>p</h3>
+        <ul>
+            <li>
+                <b>Represents Pattern</b>
+            </li>
+        </ul>
+
+        <h3>p+</h3>
+        <ul>
+            <li>
+                <b>indicates that the character must occur at least one or more times. </b>
+            </li>
+            <div class="example">
+                let str = "+7(903)-123-45-67"; <br>
+
+                let numbers = str.match(/\d{1,}/g); <br>
+
+                alert(numbers); // 7,903,123,45,67
+            </div>
+        </ul>
+
+        <h3>p*</h3>
+        <ul>
+            <li>
+                <b>indicates that the character must occur zero or more times. </b>
+            </li>
+            <div class="example">
+                alert( "100 10 1".match(/\d0*/g) ); // 100, 10, 1
+            </div>
+        </ul>
+
+        <h3>p?</h3>
+        <ul>
+            <li>
+                <b> It means the preceding character can occur zero or one time. (only one) </b>
+            </li>
+            <div class="example">
+                let str = "Should I write color or colour?"; <br>
+
+                alert( str.match(/colou?r/g) ); // color, colour
+            </div>
+        </ul>
+
+
+        <h3>p{n}</h3>
+        <ul>
+            <li>
+                <b>Matches exactly n occurrences of the preceding character.(exist in a sequence n times)</b>
+            </li>
+            <div class="example">alert( "I'm 12345 years old".match(/\d{5}/) ); // "12345"</div>
+        </ul>
+
+        <h3>p{m,n}</h3>
+        <ul>
+            <li>
+                <b>Matches between n and m occurrences of the preceding element </b>
+            </li>
+            <div class="example">
+                alert( "I'm not 12, but 1234 years old".match(/\d{3,5}/) ); // "1234"
+            </div>
+        </ul>
+
+        <h3>p$</h3>
+        <ul>
+            <li>
+                <b> Should exist at the end of the String (last Position) </b>
+            </li>
+        </ul>
+
+        <h3>^p</h3>
+        <ul>
+            <li>
+                <b> Should exist at the start of the String (start Position) </b>
+            </li>
+        </ul>
+
+        <h3>[^a-c] & ^p</h3>
+        <ul>
+            <li>
+                <b> There is a difference </b>
+            </li>
+
+        </ul>
+    </div>
+
+    <h2><b>Lookahead and Lookbehind</b></h2>
+    <p>Sometimes we need to find only those matches for a pattern that are followed or preceded by another pattern. <br>
+        <br>
+
+        There’s a special syntax for that, called “lookahead” and “lookbehind”, together referred to as “lookaround”.
+    </p>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pattern</th>
+                    <th>type</th>
+                    <th>matches</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>X(?=Y)</td>
+                    <td>Positive lookahead</td>
+                    <td>X is followed by Y</td>
+                </tr>
+                <tr>
+                    <td>X(?!Y)</td>
+                    <td>Negative lookahead</td>
+                    <td>X is not followed by Y</td>
+                </tr>
+
+                <tr>
+                    <td> (?<=Y)X </td>
+                    <td>Positive lookbehind</td>
+                    <td>X is after Y</td>
+                </tr>
+
+                <tr>
+                    <td>(?<!Y)X </td>
+                    <td>Negative lookbehind</td>
+                    <td>X is not after Y</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2><b>Chracter Literals</b></h2>
+
+    <h3>\d</h3>
+    <ul>
+        <li>
+            <b> A new line Character </b>
+        </li>
+    </ul>
+
+    <h3>\t</h3>
+    <ul>
+        <li>
+            <b>A tab Character</b>
+        </li>
+    </ul>
+
+    <h3>\r</h3>
+    <ul>
+        <li>
+            <b>A carraiage return Character</b>
+        </li>
+    </ul>
+
+    <h3>\f</h3>
+    <ul>
+        <li>
+            <b>A form feed Character(next page character)</b>
+        </li>
+    </ul>
+
+    <h3>\0</h3>
+    <ul>
+        <li>
+            <b>Null Character</b>
+        </li>
+    </ul>
+
+    <h3>\v</h3>
+    <ul>
+        <li>
+            <b>A vertical tab Character</b>
+        </li>
+    </ul>
+
+    <h2><b>Meta Character</b></h2>
+
+    <h3>\d</h3>
+    <ul>
+        <li>
+            <b>Any numeric Character ([0-9])</b>
+        </li>
+    </ul>
+
+    <h3>\D</h3>
+    <ul>
+        <li>
+            <b>Any non-numeric Character ([0-9])</b>
+        </li>
+    </ul>
+
+    <h3>\w</h3>
+    <ul>
+        <li>
+            <b>Any word Character ([a-z a-Z 0-9])</b>
+        </li>
+    </ul>
+
+    <h3>\W</h3>
+    <ul>
+        <li>
+            <b>Any non-word Character ([^a-z a-Z 0-9])</b>
+        </li>
+    </ul>
+
+    <h3>\s</h3>
+    <ul>
+        <li>
+            <b>Any white space Character(like tab and space) ([\n \t \r \f])</b>
+        </li>
+    </ul>
+
+    <h3>\S</h3>
+    <ul>
+        <li>
+            <b>Anycharacter which is not a white space Character(like tab and space) ([\n \t \r \f])</b>
+        </li>
+    </ul>
+
+    <h3>\.</h3>
+    <ul>
+        <li>any single character</li>
+    </ul>
+
+    <h2><b>Regular Expression Flags</b></h2>
+    <p>Flags are used with regular expressions that allow various options such as global search, case-insensitive
+        search, etc. <br>
+        They can be used separately or together.</p>
+
+    <h3>i</h3>
+    <ul>
+        <li>Performs case-insensitive matching</li>
+    </ul>
+
+    <h3>g</h3>
+    <ul>
+        <li>global Matching (find all matches)</li>
+    </ul>
+
+    <h3>m</h3>
+    <ul>
+        <li>Performs multiline match</li>
+    </ul>
+
+    <h2><b>Regular Expression Methods</b></h2>
+    <p>we can use regular expressions with RegExp() methods: .</p>
+    <ul>
+        <li><b>test()</b></li>
+        <li><b>exec()</b></li>
+    </ul>
+    <p>There are also some string methods that allow you to pass RegEx as its parameter. They are: </p>
+    <ul>
+        <li><b>match()</b></li>
+        <li><b>replace()</b></li>
+        <li><b>search()</b></li>
+        <li><b>split()</b></li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>exec()</td>
+                <td>Executes a search for a match in a string and returns an array of information. <br>
+                    It returns null on a mismatch.</td>
+
+            </tr>
+            <tr>
+                <td>test()</td>
+                <td>Tests for a match in a string and returns true or false.</td>
+            </tr>
+
+            <tr>
+                <td>match()</td>
+                <td>Returns an array containing all the matches. It returns null on a mismatch.</td>
+            </tr>
+
+            <tr>
+                <td>matchAll()</td>
+                <td>Returns an iterator containing all of the matches.</td>
+            </tr>
+
+            <tr>
+                <td>search()</td>
+                <td>Tests for a match in a string and returns the index of the match. It returns -1 if the search fails.
+                </td>
+            </tr>
+
+            <tr>
+                <td>replace()</td>
+                <td>Searches for a match in a string and replaces the matched substring with a replacement substring.
+                </td>
+            </tr>
+
+            <tr>
+                <td>split()</td>
+                <td>Break a string into an array of substrings.</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h1><b>Some Examples</b></h1>
+    Example 1: Regular Expressions
+    <h2><b></b></h2>
+
+    <div class="example">
+        const string = 'Find me'; <br>
+        const pattern = /me/; <br> <br>
+
+        // search if the pattern is in string variable <br>
+        const result1 = string.search(pattern); <br>
+        console.log(result1); // 5 <br> <br>
+
+        // replace the character with another character <br>
+        const string1 = 'Find me'; <br>
+        string1.replace(pattern, 'found you'); // Find found you <br> <br>
+
+        // splitting strings into array elements <br>
+        const regex1 = /[\s,]+/; <br>
+        const result2 = 'Hello world! '.split(regex1); <br>
+        console.log(result2); // ['Hello', 'world!', ''] <br> <br>
+
+        // searching the phone number pattern <br>
+        const regex2 = /(\d{3})\D(\d{3})-(\d{4})/g; <br>
+        const result3 = regex2.exec('My phone number is: 555 123-4567.'); <br>
+        console.log(result3); // ["555 123-4567", "555", "123", "4567"] <br>
+    </div>
+
+    <h2><b>Example 2: Regular Expression Modifier</b></h2>
+    <div class="example">
+        const string = 'Hello hello hello'; <br> <br>
+
+        // performing a replacement <br>
+        const result1 = string.replace(/hello/, 'world'); <br>
+        console.log(result1); // Hello world hello <br> <br>
+
+        // performing global replacement <br>
+        const result2 = string.replace(/hello/g, 'world'); <br>
+        console.log(result2); // Hello world world <br> <br>
+
+        // performing case-insensitive replacement <br>
+        const result3 = string.replace(/hello/i, 'world'); <br>
+        console.log(result3); // world hello hello <br> <br>
+
+        // performing global case-insensitive replacement <br>
+        const result4 = string.replace(/hello/gi, 'world'); <br>
+        console.log(result4); // world world world <br> <br>
+    </div>
+
+    <h2><b>Example 3: Validating the Phone Number</b></h2>
+
+    <div class="example">
+        // program to validate the phone number <br> <br>
+
+        function validatePhone(num) { <br> <br>
+
+        // regex pattern for phone number <br>
+        const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g; <br> <br>
+
+        // check if the phone number is valid <br>
+        let result = num.match(re); <br>
+        if (result) { <br>
+        console.log('The number is valid.'); <br>
+        } <br>
+        else { <br>
+        let num = prompt('Enter number in XXX-XXX-XXXX format:'); <br>
+        validatePhone(num); <br>
+        } <br>
+        } <br> <br>
+
+        // take input <br>
+        let number = prompt('Enter a number XXX-XXX-XXXX'); <br> <br>
+
+        validatePhone(number);  <br> <br> <br>
+
+
+        output : <br>
+        Enter a number XXX-XXX-XXXX: 2343223432 <br>
+        Enter number in XXX-XXX-XXXX format: 234-322-3432 <br>
+        The number is valid
+    </div>
+
+    <h2><b>Example 4: Validating the Email Address</b></h2>
+    <div class="example">
+        // program to validate the email address <br> <br>
+
+        function validateEmail(email) { <br> <br>
+
+        // regex pattern for email <br>
+        const re = /\S+@\S+\.\S+/g; <br> <br>
+
+        // check if the email is valid <br>
+        let result = re.test(email); <br>
+        if (result) { <br>
+        console.log('The email is valid.'); <br>
+        } <br>
+        else { <br>
+        let newEmail = prompt('Enter a valid email:'); <br>
+        validateEmail(newEmail); <br>
+        } <br>
+        } <br> <br>
+
+        // take input <br>
+        let email = prompt('Enter an email: '); <br> <br>
+
+        validateEmail(email); <br> <br> <br>
+
+        output <br>
+        Enter an email: hellohello <br>
+        Enter a valid email: learningJS@gmail.com <br>
+        The email is valid.
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="btn-last">
+        <a class="next2" href="/JavaScript/Arrays/arrays.html">Previous Page</a>
+        <a class="next2" href="/JavaScript/Regex/regex.html" target="_blank">Next Page</a>
+    </div>
+
+</body>
+
+</html>

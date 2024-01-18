@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <h1>Tables in HTML</h1>
+<p>Tables are used to represent real life table data. </p>
+<pre>
+    < tr > : Used to display table row.
+    < td > : Used to display table data.
+    < th > : Used to display table header.
+</pre>
+<table class="t1">
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>Ayush</td>
+        <td>10429</td>
+    </tr>
+</table>
+
+<h3>Example :</h3>
+<pre>
+    < table>
+        < tr>
+            < th>Name< /th>
+        < /tr>
+        < tr>
+            < td>Ayush< /td>
+            < td>10429< /td>
+        < /tr>
+    < /table>
+</pre>
+
+<h2><b>HTML Table Borders</b></h2>
+<table class="t2">
+    <tr>
+      <th>Company</th>
+      <th>Name of Employee</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Edureify</td>
+      <td>Ayush Kumar</td>
+      <td>India</td>
+    </tr>
+    <tr>
+      <td>HCL</td>
+      <td>Ramesh</td>
+      <td>Nepal</td>
+    </tr>
+  </table> 
+
+  <h2><b>Style Table Borders</b></h2>
+  <p>If we set a background color of each cell, <br> 
+    and give the border a white color (the same as the document background), <br>
+    we get the impression of an invisible border:</p>
+
+    <h2><b>Round Table Borders</b></h2>
+    <p>With the border-radius property, the borders get rounded corners:</p>
+    
+    <pre>
+    syntax : table, th, td {
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+
+</pre>
+
+<table class="t3">
+    <tr>
+      <th>Company</th>
+      <th>Name of Employee</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Edureify</td>
+      <td>Ayush Kumar</td>
+      <td>India</td>
+    </tr>
+    <tr>
+      <td>HCL</td>
+      <td>Ramesh</td>
+      <td>Nepal</td>
+    </tr>
+  </table> 
+
+  <h1><b>HTML Table Padding & Spacing</b></h1>
+  <p>HTML tables can adjust the padding inside the cells, and also the space between the cells.</p>
+  <h2><b>HTML Table - Cell Padding</b></h2>
+  <p>Cell padding is the space between the cell edges and the cell content. br
+
+    By default the padding is set to 0.br
+    
+    To add padding on table cells, use the CSS padding property:</p>
+
+    <table class="t4">
+        <tr>
+            <th>Month</th>
+            <th>Saving</th>
+        </tr>
+        <tr>
+            <td>Jan</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Feb</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Mar</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td>900</td>
+        </tr>
+
+
+    </table>
+
+    <pre>
+        Syntax : table,th,td,tr {
+            border: 2px solid blue;
+            border-collapse: collapse;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 40px;
+              }
+        
+    </pre>
+
+    <h2><b>HTML Table - Cell Spacing</b></h2>
+    <p>Cell spacing is the space between each cell. <br>
+
+        By default the space is set to 2 pixels. <br>
+        
+        To change the space between table cells, use the CSS border-spacing property on the table element:</p>
+ <pre>
+    Syntax : table {
+        border-spacing: 30px;
+      }
+ </pre>
+
+ <h1><b>HTML Table Colspan & Rowspan</b></h1>
+  <h2>Colspan In HTML</h2>
+  <p>We can use the colspan attribute to make a cell span multiple cols.</p>
+
+<p>Colspan attribute</p>
+
+<table class="t5">
+  <tr>
+    <th colspan="2">Full Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Aman</td>
+    <td> singh</td>
+    <td>28</td>
+  </tr>
+   <tr>
+    <td>Deepak</td>
+    <td>Kumar</td>
+    <td>25</td>
+  </tr>
+</table>
+
+<h2><b>Table Rowspan in HTML</b></h2>
+<p>We can use the rowspan attribute to make a cell span multiple rows.</p>
+
+<p>Rowspan attribute</p>
+<table class="t6">
+  <tr>
+    <th>Name</th>
+    <td>Ramesh kumar</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>9588444545</td>
+  </tr>
+  <tr>
+    <td>9744458266</td>
+  </tr>
+</table> <br> <br>
+
+<div class="btn-last">
+  <a class="next2" href="./ListinHtml.html">Previous Page </a> 
+  <br>
+  <br>
+  <a class="next2" href="./form.html" target="_blank">Next Page</a> <br>
+</div>
+ 
+
+</body>
+</html>

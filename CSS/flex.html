@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <link rel="stylesheet" href="flex.css">
+</head>
+
+<body>
+    <h1><b>What Is Flex ? </b></h1>
+    <p>In CSS, "flex" refers to the flexible box layout, also known as Flexbox. <br>
+        Flexbox is a layout model that allows you to design complex layouts more efficiently and predictably. <br>
+        It is particularly useful for distributing space along a single axis (either horizontally or vertically) and for
+        aligning items within a container.</p>
+
+    <h2><b>CSS Flexbox Layout Module</b></h2>
+    <p>Before the Flexbox Layout module, there were four layout modes:</p>
+    <ul>
+        <li>Block, for sections in a webpage</li>
+        <li>Inline, for text</li>
+        <li>Table, for two-dimensional table data</li>
+        <li>Positioned, for explicit position of an element</li>
+    </ul>
+
+    <h3>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using
+        float or positioning.</h3>
+
+    <h1><b>Flex Container</b></h1>
+    <p>The flex container becomes flexible by setting the <b><i style="color: red;">display property to flex</i></b></p>
+
+    <h2><b>Two Axes Of FlexBox</b></h2>
+    <ul>
+        <li>Main-Axis</li>
+        <li>Cross-Axis</li>
+    </ul>
+
+    <h2><b>The flex container properties are:</b></h2>
+    <ul>
+        <li><b>Flex-Direction</b></li>
+        <li><b>Justify-Content</b></li>
+        <li><b>Flex-Wrap</b></li>
+        <li><b>Flex-Flow</b></li>
+        <li><b>Align-item</b></li>
+        <li><b>Align-Content</b></li>
+    </ul>
+
+    <h2><b>The Main Axis</b></h2>
+    <p>The main axis is defined by flex-direction</p>
+
+    <ul>
+        <li>row</li>
+        <li>row-reverse</li>
+        <li>column</li>
+        <li>column-reverse</li>
+    </ul>
+    <section class="row">
+        <h2><b>Example For Row</b></h2>
+        <div class="container">
+            <div class="box">box-1</div>
+            <div class="box">box-2</div>
+            <div class="box">box-3</div>
+            <div class="box">box-4</div>
+        </div>
+        <h2><b>Example For Row-Reverse</b></h2>
+        <div class="container1">
+            <div class="box">box-1</div>
+            <div class="box">box-2</div>
+            <div class="box">box-3</div>
+            <div class="box">box-4</div>
+        </div>
+    </section>
+
+    <section class="column">
+        <h2><b>Example For column</b></h2>
+        <div class="container2">
+            <div class="box">box-1</div>
+            <div class="box">box-2</div>
+            <div class="box">box-3</div>
+            <div class="box">box-4</div>
+        </div>
+
+        <h2><b>Example For column-Reverse</b></h2>
+        <div class="container3">
+            <div class="box">box-1</div>
+            <div class="box">box-2</div>
+            <div class="box">box-3</div>
+            <div class="box">box-4</div>
+        </div>
+
+    </section>
+    <h1><b>Justify-Content</b></h1>
+    <p>The justify-content property is a sub-property of the Flexible Box Layout module. <br>
+        It defines the alignment along the main axis. It helps distribute <br>
+        extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have
+        reached their maximum size. <br> </p>
+
+    <h2><b>The justify-content property accepts five different values:</b></h2>
+    <ul>
+        <li><b>flex-start (default):</b></li>
+    </ul>
+    <p> Items are packed toward the start line</p>
+    <section class="start">
+        <div class="img1">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <ul>
+        <li><b>flex-end</b></li>
+    </ul>
+    <p> Items are packed toward to end line</p>
+    <section class="end">
+        <div class="img2">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <ul>
+        <li><b>Center</b></li>
+    </ul>
+    <p> Items are centered along the line</p>
+    <section class="center">
+        <div class="img3">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <ul>
+        <li><b>space-between</b></li>
+    </ul>
+    <p> Items are evenly distributed in the line; first item is on the start line, last item on the end line</p>
+    <section class="space-between">
+        <div class="img4">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <ul>
+        <li><b>space-around</b></li>
+    </ul>
+    <p> Items are evenly distributed in the line with equal space around them</p>
+    <section class="space-around">
+        <div class="img5">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <ul>
+        <li><b>space-evenly</b></li>
+    </ul>
+    <p> Items are distributed so that the spacing between any two adjacent alignment subjects, <br>
+        before the first alignment subject, and after the last alignment subject is the same</p>
+    <section class="space-evenly">
+        <div class="img6">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image4.jpg" alt="image4">
+        </div>
+    </section>
+
+    <h1><b>Flex -: Wrap</b></h1>
+    <p>The flex-wrap property specifies whether the flex items should wrap or not. <br>
+
+        The examples below have flex items, to better demonstrate the flex-wrap property.</p>
+    <section class="flex-wrap">
+        <div class="img7">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image3.jpg" alt="image3">
+
+        </div>
+    </section>
+
+    <h1><b>Flex -: nowrap</b></h1>
+    <p>The nowrap value specifies that the flex items will not wrap (this is default): </p>
+    <section class="flex-nowrap">
+        <div class="img8">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image3.jpg" alt="image3">
+
+        </div>
+    </section>
+
+    <h1><b>Flex -: wrap-reverse</b></h1>
+    <p>The wrap-reverse value specifies that the flexible items will wrap if necessary, in reverse order: </p>
+    <section class="flex-wrapreverse">
+
+    </section>
+
+    <h1><b>Flex Flow Property </b></h1>
+    <p>The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.</p>
+    <section class="flex-flow">
+        <div class="img9">
+            <img src="image1.jpg" alt="image1">
+            <img src="image2.jpg" alt="image2">
+            <img src="image3.jpg" alt="image3">
+
+        </div>
+    </section> <br>
+
+    <div class="btn-last">
+        <a class="next2" href="./border-box.html">Previous Page</a>
+        <a class="next2" href="./align-item.html" target="_blank">Next Page</a>
+    </div>
+
+
+
+</body>
+
+</html>

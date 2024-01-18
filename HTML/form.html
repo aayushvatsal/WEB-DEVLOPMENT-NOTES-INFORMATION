@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1><b>Form in HTML</b></h1>
+    <p>Forms are used to collect data from the user</p>
+    <h3>Example</h3>
+    <p><b>SignUp | Login | Help Request | Contact Me </b></p>
+    <pre>
+      syntax: < form>
+        form content
+      < /form>  
+    </pre>
+    <form>
+        <table align="center" border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th colspan="2">Registration Form</th>
+            </tr>
+            <tr>
+                <td> <label for="f_name">First Name :</label> </td>
+                <td><input type="text" placeholder="First Name" id="f_name" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><label for="l_name">Last Name :</label></td>
+                <td><input type="text" placeholder="Last Name" id="l_name" name="lname" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">DOB :</label></td>
+                <td><input type="date" placeholder="" id="dob"  required min="1990-01-01" max="2025-01-01"></td>
+            </tr>
+            <tr>
+                <td><label for = "gender_id">Gender</label></td>
+                <td>
+                    <select id="gender_id" name="gender" required>
+                        <option>- select gender -</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                       
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Marital Status :</td>
+                <td>
+                    <input type="radio" name="m_status">Single
+                    <input type="radio" name="m_status">Married
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email"> Email : </label></td>
+                <td><input type="email" id="email" name="email" placeholder="Email" requiured></td>
+            </tr>
+            <tr>
+                <td><label>Phone no.</label></td>
+                <td><input type ="tel" name="tel" id="tel" required placeholder="xxx-xxx-xxxx" 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+
+                    <tr>
+                        <td><label for="number">Age :</label></td>
+                        <td><input type="number" id="number" name="number" placeholder="Age" min="18" max="32">
+                        </td>
+                    </tr>
+            </tr> 
+            <tr>
+                <td><label for="Bio">Bio</label></td>
+                <td><textarea name="Bio" id="Bio"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="cv">Resume</label></td>
+                <td><input type="file" name="cv" id="cv" placeholder="cv" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="agree">I agree to all terms and conditions </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+        
+        </table>
+    </form>
+
+  <h2><b>Action In Form </b></h2>
+  <p>Action attribute is used define what action needs to be performanced when form is submitted.</p>
+  
+ <pre> Syntax : < form action="/action.php" > < /form> </pre>
+
+ <h2>Form Element : Input</h2>
+ <input type="text" placeholder="Enter Name">
+ <input type="password" placeholder="password">
+
+ <pre>
+    syntax : < input type="text" placeholder="Enter Name">
+    < input type="password" placeholder="password">
+ </pre>
+ <br>
+ <br>
+
+   <h1><b>Some other Tags</b></h1>
+   <h2><b>Iframe Tag</b></h2>
+   <p>Website inside Website</p>
+
+   <iframe width="420" height="315"
+   src="https://www.youtube.com/embed/tgbNymZ7vqY">
+   </iframe> 
+
+   <h2><b>Video Tag</b></h2>
+   <video width="320" height="240" controls>
+    <source src="Edureify diwali celebration.mp4" type="video/mp4"> </video> <br> <br>
+
+   <div class="btn-last">
+    <a class="next2" href="./table.html">Previous Page </a> 
+   </div> 
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>
+        <b> Operators in JavaScript </b>
+    </h1>
+    <ul>
+        <li>Assignment operator</li>
+        <li>Arithmetic Operator</li>
+        <li>Comparison Operator</li>
+        <li>Logical Operator</li>
+        <li>Conditional Operator</li>
+    </ul>
+
+    <h2><b>JavaScript Assignment</b></h2>
+
+    <p>The Assignment Operator (=) assigns a value to a variable:</p>
+
+    <h3><b>Example:</b></h3>
+    <div class="example"> <br>
+        // Assign the value 5 to x <br>
+        let x = 5; <br>
+        // Assign the value 2 to y <br>
+        let y = 2; <br>
+        // Assign the value x + y to z: <br>
+        let z = x + y; <br>
+    </div>
+
+    <h2><b> Addition Operator</b></h2>
+    <p>The Addition Operator (+) adds numbers:</p>
+
+    <div class="example"> <br>
+        var num1 = 22; <br>
+        var num2 = 28; <br>
+        var num3 = 10.2; <br>
+        var num4 = 20.6; <br>
+        console.log("22 + 28 = " + num1 + num2); // 22 + 28 = 2228 <br>
+        console.log("22 + 28 = " + (num1 + num2)); // 22 + 28 = 50 <br>
+        console.log("10.2 + 20.6 = " + (num3 + num4)); // 10.2 + 20.6 = 30.8 <br>
+
+    </div>
+
+    <h2><b> Substraction Operator</b></h2>
+    <p>The Substraction Operator (-) Substract numbers:</p>
+
+    <div class="example"> <br>
+        var num1 = 28; <br>
+        var num2 = 22; <br>
+        var num3 = 28.50; <br>
+        var num4 = 22.75; <br>
+        console.log("28 - 22 = " + num1 - num2); // 28 - 22 = NaN <br>
+        console.log("28 - 22 = " + (num1 - num2)); // 28 - 22 = 6 <br>
+        console.log("28.50 - 22.75 = " + (num3 - num4)); // 28.50 - 22.75 = 5.75 <br>
+
+    </div>
+
+    <h2><b> Multiplication Operator</b></h2>
+    <p>The Multiplication Operator (*) Multiply numbers:</p>
+    <div class="example"> <br>
+        var num1 = 28; <br>
+        var num2 = 22; <br>
+        console.log("28 * 22 = " + (num1 * num2)); // 28 * 22 = 616 <br>
+
+        var num1 = 28; <br>
+        var num2 = -22; <br>
+        console.log("28 * -22 = " + (num1 * num2)); // 28 * -22 = -616 <br>
+
+        var num1 = 'asdg';
+        var num2 = 22;
+        console.log("asdg * 22 = " + (num1 * num2)); // asdg * 22 = NaN
+
+    </div>
+
+    <h2><b>Division Operator</b></h2>
+
+    <div class="example"> <br>
+        var num1 = 28; <br>
+        var num2 = 22; <br>
+        console.log("28 / 22 = " + (num1 / num2)); // 28 / 22 = 1.2727272727272727 <br>
+
+        var num1 = 28; <br>
+        var num2 = 0; <br>
+        console.log("28 / 0 = " + (num1 / num2)); // 28 / 0 = Infinity <br>
+
+    </div>
+
+    <h2><b>Modulo Operator(Remainder)</b></h2>
+    <div class="example">
+        var num1 = 28; <br>
+        var num2 = 22; <br>
+        console.log("28 % 22 = " + (num1 % num2)); // 28 % 22 = 6 <br>
+
+        var num1 = 1; <br>
+        var num2 = 2; <br>
+        console.log("1 % 2 = " + (num1 % num2)); // 1 % 2 = 1 <br>
+
+        123 % 10; // returns 3 <br>
+
+    </div>
+
+    <h2><b>Exponentiation Operator:</b></h2>
+    <p> Exponentiation Operator is defined as (**) and raises the first operand to the power second operand and returns
+        an exponent.</p>
+
+    <div class="example"> <br>
+        var num1 = 2; <br>
+        var num2 = 2; <br>
+        console.log("2 ** 2 = " + (num1 ** num2)); // 2 ** 2 = 4 <br>
+
+    </div>
+
+    <h2><b>Increment Operator:</b></h2>
+    <p>Increment Operator is defined by a double plus sign (++). <br>
+        This is a unary operator, x++ produces a value of x before adding 1 to x. <br>
+        This is called the <em>post-increment operator,</em> <br>
+        since the value is produced, and then the variable is incremented. <br>
+        On the other hand,++x produces a value of x after adding 1 to x. <br>
+        This is called the <em>pre-increment operator,</em></p> <br>
+
+    <div class="example"> <br>
+
+        var x = 20; <br>
+        x++; // x returns 21 <br>
+        console.log(x) <br>
+
+        var x = 20; <br>
+        var y = x++; // y is 20, x is 21 <br>
+        console.log(x) <br>
+        console.log(y) <br>
+
+        var x = 20; <br>
+        var y = ++x; // y is 21, x is 21 <br>
+        console.log(x) <br>
+        console.log(y) <br>
+
+
+    </div>
+
+    <h2><b>Decrement Operator:</b></h2>
+    <p>Decrement Operator is defined by a double plus sign (--). <br>
+        x-- produces a value of x before subtracting 1 to x. <br>
+        This is called the <em>post-decrement operator,</em> <br>
+        since the value is produced, and then the variable is decremented. <br>
+        On the other hand,--x produces a value of x after substracting 1 to x. <br>
+        This is called the <em>pre-decrement operator</em></p> <br>
+
+    <div class="example"> <br>
+        var x = 20; <br>
+        x--; // x returns 19 <br>
+        console.log(x) <br>
+
+        var x = 20; <br>
+        var y = x--; // y is 20, x is 19 <br>
+        console.log(x) <br>
+        console.log(y) <br>
+
+        var x = 20; <br>
+        var y = --x; // y is 19, x is 19 <br>
+        console.log(x) <br>
+        console.log(y) <br>
+
+    </div> <br> <br>
+     <div class="btn-last">
+    <a class="next2" href="../Variables-And-Data-Type/conversions.html">Previous Page</a>
+    <a class="next2" href="../Operator/logicaloperator.html" target="_blank">Next Page</a> 
+</div>
+
+</body>
+
+</html>
